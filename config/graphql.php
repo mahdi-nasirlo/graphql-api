@@ -1,6 +1,9 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
+
+use App\GraphQL\Queries\allUserName;
+use App\GraphQL\Queries\welcome;
 
 return [
     'route' => [
@@ -75,6 +78,8 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
+                // "welcome" => welcome::class
+                "allUserName" => allUserName::class
                 // ExampleQuery::class,
             ],
             'mutation' => [
