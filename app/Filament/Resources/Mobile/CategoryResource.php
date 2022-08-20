@@ -4,8 +4,8 @@ namespace App\Filament\Resources\Mobile;
 
 use App\Filament\Resources\Mobile\CategoryResource\Pages;
 use App\Filament\Resources\Mobile\CategoryResource\RelationManagers;
+use App\Models\Category;
 use Filament\Forms;
-use App\Models\Mobile\InfoCategory;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -19,7 +19,7 @@ use Filament\Forms\Components\FileUpload;
 
 class CategoryResource extends Resource
 {
-    protected static ?string $model = InfoCategory::class;
+    protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -29,7 +29,7 @@ class CategoryResource extends Resource
             ->schema([
                 TextInput::make('name'),
                 Textarea::make('shortInfo'),
-                FileUpload::make('cover')
+                FileUpload::make('cover')->panelAspectRatio('1:1')
             ]);
     }
 

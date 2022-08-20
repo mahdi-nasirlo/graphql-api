@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
-use App\GraphQL\Queries\allUserName;
-use App\GraphQL\Queries\welcome;
+use App\GraphQL\Queries\allCatalogCategory;
+use App\GraphQL\Queries\allCategoryQuery;
+use App\GraphQL\Queries\allUsers;
+use App\GraphQL\Types\Category as CategoryType;
+use App\GraphQL\Types\User as UserType;
 
 return [
     'route' => [
@@ -78,9 +81,8 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // "welcome" => welcome::class
-                "allUserName" => allUserName::class
-                // ExampleQuery::class,
+                "allUser" => allUsers::class,
+                "allCategory" => allCategoryQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
@@ -111,6 +113,9 @@ return [
     // ]
     //
     'types' => [
+        "User" => UserType::class,
+        "Category" => CategoryType::class
+        // "Category" => Category::class
         // ExampleType::class,
         // ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
