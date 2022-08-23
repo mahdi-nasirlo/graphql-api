@@ -14,4 +14,9 @@ class Category extends Model
         "shortInfo",
         "cover"
     ];
+
+    public function brands()
+    {
+        return $this->morphToMany(Brand::class, "brandable");
+    }
 }

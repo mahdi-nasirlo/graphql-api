@@ -28,7 +28,7 @@ class BrandResource extends Resource
             ->schema([
                 TextInput::make("name")->required(),
                 Textarea::make("info"),
-                FileUpload::make("cover")->required()
+                FileUpload::make("cover")->panelAspectRatio("1.1")->required()
             ]);
     }
 
