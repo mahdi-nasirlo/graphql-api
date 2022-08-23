@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Api;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,5 +9,5 @@ class Brand extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["name", "cover"];
+    protected $fillable = ["name", "cover", "info"];
 }

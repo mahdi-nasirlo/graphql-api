@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\Mobile\CategoryResource\Pages;
+namespace App\Filament\Resources\CategoryResource\Pages;
 
-use App\Filament\Resources\Mobile\CategoryResource;
+use App\Filament\Resources\CategoryResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
 
