@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\GraphQL\Types;
 
 use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class Brand extends GraphQLType
@@ -29,6 +30,18 @@ class Brand extends GraphQLType
                     return asset("/storage/" . $data->cover);
                 }
             ],
+            "info" => [
+                "type" => Type::string()
+            ],
+            "logo" => [
+                "type" => Type::string(),
+                "resolve" => function ($data) {
+                    return asset("/storage/" . $data->logo);
+                }
+            ],
+            "categories" => [
+                "type" => Type::listOf(GraphQL::type("Category")),
+            ]
         ];
     }
 }

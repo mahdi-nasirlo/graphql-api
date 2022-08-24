@@ -10,4 +10,9 @@ class Brand extends Model
     use HasFactory;
 
     protected $fillable = ["name", "cover", "info", "logo", "catalog", "priceList", "installationGuide"];
+
+    public function categories()
+    {
+        return $this->morphedByMany(Category::class, "brandable");
+    }
 }

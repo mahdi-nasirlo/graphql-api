@@ -38,7 +38,7 @@ class Category extends GraphQLType
             ],
             "brands" => [
                 "type" => Type::listOf(GraphQL::type("Brand")),
-            ]
+            ],
         ];
     }
 }
