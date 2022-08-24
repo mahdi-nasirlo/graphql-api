@@ -17,9 +17,18 @@ class Brand extends GraphQLType
     public function fields(): array
     {
         return [
+            "id" => [
+                "type" => Type::int()
+            ],
             "name" => [
                 "type" => Type::string()
-            ]
+            ],
+            "cover" => [
+                "type" => Type::string(),
+                "resolve" => function ($data) {
+                    return asset("/storage/" . $data->cover);
+                }
+            ],
         ];
     }
 }

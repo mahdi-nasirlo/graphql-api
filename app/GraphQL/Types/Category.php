@@ -18,6 +18,9 @@ class Category extends GraphQLType
     public function fields(): array
     {
         return [
+            "id" => [
+                "type" => Type::int()
+            ],
             "name" => [
                 "type" => Type::string()
             ],
@@ -35,10 +38,6 @@ class Category extends GraphQLType
             ],
             "brands" => [
                 "type" => Type::listOf(GraphQL::type("Brand")),
-                // "resolve" => function ($data) {
-                //     // dd($data);
-                //     return $data;
-                // }
             ]
         ];
     }

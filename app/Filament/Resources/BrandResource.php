@@ -28,7 +28,11 @@ class BrandResource extends Resource
             ->schema([
                 TextInput::make("name")->required(),
                 Textarea::make("info"),
-                FileUpload::make("cover")->panelAspectRatio("1.1")->required()
+                FileUpload::make("cover")->image()->required(),
+                FileUpload::make("logo")->panelAspectRatio("1.1")->image(),
+                FileUpload::make("catalog"),
+                FileUpload::make("priceList"),
+                FileUpload::make("installationGuide"),
             ]);
     }
 
