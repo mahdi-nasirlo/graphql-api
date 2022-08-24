@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Queries;
 
-use App\Models\Category;
+use App\Models\Brand;
 use Closure;
 use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Definition\Type;
@@ -12,16 +12,16 @@ use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
 use Rebing\GraphQL\Support\SelectFields;
 
-class allCategoryQuery extends Query
+class allBrandsQuery extends Query
 {
     protected $attributes = [
-        'name' => 'allCategory',
+        'name' => 'allBrands',
         'description' => 'A query'
     ];
 
     public function type(): Type
     {
-        return Type::nonNull(Type::listOf(GraphQL::type("Category")));
+        return Type::listOf(GraphQL::type("Brand"));
     }
 
     public function args(): array
@@ -36,6 +36,6 @@ class allCategoryQuery extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        return Category::all();
+        return Brand::all();
     }
 }

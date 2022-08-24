@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\GraphQL\Types;
 
 use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class Category extends GraphQLType
@@ -31,6 +32,13 @@ class Category extends GraphQLType
                 "resolve" => function ($data) {
                     return asset("/storage/" . $data->cover);
                 }
+            ],
+            "brands" => [
+                "type" => Type::listOf(GraphQL::type("Brand")),
+                // "resolve" => function ($data) {
+                //     // dd($data);
+                //     return $data;
+                // }
             ]
         ];
     }

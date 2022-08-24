@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    dd(Category::all());
+    $category = Category::all();
+    foreach ($category as $key => $value) {
+        dd($value->brands);
+    }
     return view('welcome');
 });

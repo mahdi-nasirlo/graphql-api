@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
+use App\GraphQL\Queries\allBrandsQuery;
 use App\GraphQL\Queries\allCatalogCategory;
 use App\GraphQL\Queries\allCategoryQuery;
 use App\GraphQL\Queries\allUsers;
+use App\GraphQL\Types\Brand as BrandType;
 use App\GraphQL\Types\Category as CategoryType;
 use App\GraphQL\Types\User as UserType;
 
@@ -82,7 +84,8 @@ return [
         'default' => [
             'query' => [
                 "allUser" => allUsers::class,
-                "allCategory" => allCategoryQuery::class
+                "allCategory" => allCategoryQuery::class,
+                "allBrand" => allBrandsQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
@@ -114,7 +117,8 @@ return [
     //
     'types' => [
         "User" => UserType::class,
-        "Category" => CategoryType::class
+        "Category" => CategoryType::class,
+        "Brand" => BrandType::class
         // "Category" => Category::class
         // ExampleType::class,
         // ExampleRelationType::class,

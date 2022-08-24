@@ -51,7 +51,7 @@ class BrandsRelationManager extends RelationManager
                         ->searchable()
                         // ->getSearchResultsUsing(static fn (Select $component, string $search): array => $getOptions(search: $search, searchColumns: $component->getSearchColumns()))
                         // ->getOptionLabelUsing(fn ($value): string => $this->getRecordTitle($this->getRelationship()->getRelated()->query()->find($value)))
-                        ->options(fn (Brand $record) => Brand::all()->pluck("name", "id")->toArray())
+                        ->options(fn () => Brand::all()->pluck("name", "id")->toArray())
 
                         ->disableLabel()
                     // Select::make('brand_id')
