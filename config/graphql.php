@@ -6,6 +6,8 @@ use App\GraphQL\Queries\allBrandsQuery;
 use App\GraphQL\Queries\allCatalogCategory;
 use App\GraphQL\Queries\allCategoryQuery;
 use App\GraphQL\Queries\allUsers;
+use App\GraphQL\Queries\brandQuery;
+use App\GraphQL\Queries\categoryQuery;
 use App\GraphQL\Types\Brand as BrandType;
 use App\GraphQL\Types\Category as CategoryType;
 use App\GraphQL\Types\User as UserType;
@@ -85,7 +87,9 @@ return [
             'query' => [
                 "allUser" => allUsers::class,
                 "allCategory" => allCategoryQuery::class,
-                "allBrand" => allBrandsQuery::class
+                "allBrand" => allBrandsQuery::class,
+                "brand" =>  brandQuery::class,
+                "category" => categoryQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
