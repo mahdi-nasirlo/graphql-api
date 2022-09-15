@@ -33,6 +33,12 @@ class Brand extends GraphQLType
             "info" => [
                 "type" => Type::string()
             ],
+            "catalog" => [
+                "type" => Type::string(),
+                "resolve" => function ($data) {
+                    return asset("/storage/" . $data->catalog);
+                }
+            ],
             "logo" => [
                 "type" => Type::string(),
                 "resolve" => function ($data) {
