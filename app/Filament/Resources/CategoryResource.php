@@ -18,6 +18,10 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+// component 
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+
+
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;

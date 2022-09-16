@@ -34,10 +34,7 @@ class Brand extends GraphQLType
                 "type" => Type::string()
             ],
             "catalog" => [
-                "type" => Type::string(),
-                "resolve" => function ($data) {
-                    return asset("/storage/" . $data->catalog);
-                }
+                "type" => Type::listOf(GraphQL::type("Media")),
             ],
             "logo" => [
                 "type" => Type::string(),
@@ -47,7 +44,7 @@ class Brand extends GraphQLType
             ],
             "categories" => [
                 "type" => Type::listOf(GraphQL::type("Category")),
-            ]
+            ],
         ];
     }
 }

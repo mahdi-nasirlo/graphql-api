@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string("name");
             $table->string("cover")->nullable();
             $table->string("logo");
-            $table->string("catalog")->nullable();
-            $table->string("priceList")->nullable();
-            $table->string("installationGuide")->nullable();
+            // $table->string("catalog")->nullable();
+            // $table->string("priceList")->nullable();
+            // $table->string("installationGuide")->nullable();
             $table->text("info")->nullable();
             $table->timestamps();
         });

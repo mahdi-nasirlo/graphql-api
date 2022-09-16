@@ -10,6 +10,7 @@ use App\GraphQL\Queries\brandQuery;
 use App\GraphQL\Queries\categoryQuery;
 use App\GraphQL\Types\Brand as BrandType;
 use App\GraphQL\Types\Category as CategoryType;
+use App\GraphQL\Types\Media as MediaType;
 use App\GraphQL\Types\User as UserType;
 
 return [
@@ -122,7 +123,8 @@ return [
     'types' => [
         "User" => UserType::class,
         "Category" => CategoryType::class,
-        "Brand" => BrandType::class
+        "Brand" => BrandType::class,
+        "Media" => MediaType::class
         // "Category" => Category::class
         // ExampleType::class,
         // ExampleRelationType::class,

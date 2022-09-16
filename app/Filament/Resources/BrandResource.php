@@ -7,6 +7,7 @@ use App\Filament\Resources\BrandResource\RelationManagers;
 use App\Models\Brand;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
@@ -30,9 +31,13 @@ class BrandResource extends Resource
                 Textarea::make("info"),
                 FileUpload::make("cover")->image()->required(),
                 FileUpload::make("logo")->panelAspectRatio("1.1")->image(),
-                FileUpload::make("catalog"),
-                FileUpload::make("priceList"),
-                FileUpload::make("installationGuide"),
+                SpatieMediaLibraryFileUpload::make("catalog")
+                    ->multiple()
+                    ->maxSize(1024)
+                    ->enableReordering()
+                    ->collection("catalog"),
+                // FileUpload::make("priceList"),
+                // FileUpload::make("installationGuide"),
             ]);
     }
 

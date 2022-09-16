@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    dd(Brand::all()->first()->catalog);
     return view('welcome');
 });
 
