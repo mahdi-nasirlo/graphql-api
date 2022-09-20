@@ -36,6 +36,16 @@ class BrandResource extends Resource
                     ->maxSize(1024)
                     ->enableReordering()
                     ->collection("catalog"),
+                SpatieMediaLibraryFileUpload::make("price_list")
+                    ->multiple()
+                    ->maxSize(1024)
+                    ->enableReordering()
+                    ->collection("price_list"),
+                SpatieMediaLibraryFileUpload::make("install_guide")
+                    ->multiple()
+                    ->maxSize(1024)
+                    ->enableReordering()
+                    ->collection("install_guide"),
                 // FileUpload::make("priceList"),
                 // FileUpload::make("installationGuide"),
             ]);

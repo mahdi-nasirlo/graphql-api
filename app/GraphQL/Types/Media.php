@@ -29,6 +29,9 @@ class Media extends GraphQLType
             "collection_name" => [
                 "type" => Type::string()
             ],
+            "uuid" => [
+                "type" => Type::string(),
+            ],
             "path" => [
                 "type" => Type::string(),
                 "resolve" => function ($data) {

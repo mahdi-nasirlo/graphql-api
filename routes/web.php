@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    dd(Brand::all()->first()->catalog);
+    dd(Brand::all()->first()->price_list);
     return view('welcome');
 });
 

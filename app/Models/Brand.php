@@ -15,12 +15,24 @@ class Brand extends Model implements HasMedia
     protected $fillable = ["name", "cover", "info", "logo", "catalog", "priceList", "installationGuide"];
 
     protected $append = [
-        'catalog'
+        'catalog',
+        'price_list',
+        'install_guide'
     ];
 
     public function getCatalogAttribute()
     {
         return $this->getMedia('catalog');
+    }
+
+    public function getPriceListAttribute()
+    {
+        return $this->getMedia('price_list');
+    }
+
+    public function getInstallGuideAttribute()
+    {
+        return $this->getMedia('install_guide');
     }
 
     public function categories()

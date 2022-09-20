@@ -21,27 +21,41 @@ class Brand extends GraphQLType
             "id" => [
                 "type" => Type::int()
             ],
+
             "name" => [
                 "type" => Type::string()
             ],
+
             "cover" => [
                 "type" => Type::string(),
                 "resolve" => function ($data) {
                     return asset("/storage/" . $data->cover);
                 }
             ],
+
             "info" => [
                 "type" => Type::string()
             ],
+
             "catalog" => [
                 "type" => Type::listOf(GraphQL::type("Media")),
             ],
+
+            "install_guide" => [
+                "type" => Type::listOf(GraphQL::type("Media")),
+            ],
+
+            "price_list" => [
+                "type" => Type::listOf(GraphQL::type("Media")),
+            ],
+
             "logo" => [
                 "type" => Type::string(),
                 "resolve" => function ($data) {
                     return asset("/storage/" . $data->logo);
                 }
             ],
+
             "categories" => [
                 "type" => Type::listOf(GraphQL::type("Category")),
             ],
