@@ -25,5 +25,14 @@
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
     <!-- Google Tag Manager-->
-
+    @livewireStyles
 </head>
+
+<style>
+    .btn-spinner {
+        display: flex !important;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
