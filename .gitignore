@@ -4,6 +4,8 @@
 /public/storage
 /public/img
 /storage/*.key
+/resources/theme
+/resources/cartzilla
 /vendor
 .env.backup
 .phpunit.result.cache
