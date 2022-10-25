@@ -1,7 +1,8 @@
 <div>
     {{-- <div id="signup-tab" class="tab-pane fade"> --}}
-    <form wire:submit.prevent='saveUser' class="needs-validation @if ($errors->any()) was-validated @endif"
-        autocomplete="off" novalidate="">
+    <form wire:submit.prevent='saveUser'
+        class="needs-validation was-validated @if ($errors->any()) was-validated @endif" autocomplete="off"
+        novalidate="">
         <div class="mb-3">
             <label class="form-label" for="su-name">نام کامل</label>
             <input wire:model='name' autocomplete="false" class="form-control" type="text" id="su-name"
@@ -24,10 +25,17 @@
             <div class="password-toggle">
                 <input wire:model='password' class="form-control" type="password" id="su-password" required="">
                 <label class="password-toggle-btn" aria-label="نمایش/پنهان کردن">
-                    <input class="password-toggle-check is-invalid" type="checkbox"><span
+                    <input id="password" invalid="true" class="password-toggle-check is-invalid" type="checkbox"><span
                         class="password-toggle-indicator"></span>
                 </label>
             </div>
+
+            <script>
+                // document.getElementById("password").setCustomValidity('sdfds');
+                document.getElementById("password").setErrors({
+                    'incorrect': true
+                })
+            </script>
             @error('password')
                 <div class="text-danger">
                     {{ $message }}
