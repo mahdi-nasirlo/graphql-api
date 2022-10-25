@@ -7,6 +7,17 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <style>
+        input {
+            background: white !important;
+            border: 1px solid rgb(209 213 219 / var(--tw-border-opacity)) !important;
+        }
+
+        select {
+            background: white !important;
+            color: gray !important;
+            border: 1px solid rgb(209 213 219 / var(--tw-border-opacity)) !important;
+        }
+
         .select2 .select2-container {
             width: 100% !important;
         }
@@ -32,9 +43,9 @@
     <div class="grid md:grid-cols-4 grid-cols-1 w-full gap-3">
         @foreach ($tabs as $key => $group)
             <button wire:key="{{ $key }}" wire:click="selectedTab('{{ $group }}')"
-                class="@if ($activeTab === $group) bg-gray-200 dark:bg-gray-700 border-gray-700 @endif flex bg-white hover:bg-gray-100 dark:bg-gray-800 border my-2 items-center focus:outline-none">
+                class="@if ($activeTab === $group) bg-gray-200 border-gray-700 @endif flex bg-white hover:bg-gray-100  border my-2 items-center focus:outline-none border-none">
                 <div
-                    class="flex items-center justify-center w-5 h-14 ml-4 @if ($activeTab === $group) !bg-white dark:bg-transparent @endif bg-transparent font-semibold text-black">
+                    class="flex items-center justify-center w-5 h-14 ml-4 @if ($activeTab === $group) !bg-white @endif bg-transparent font-semibold text-black">
                     {{ ++$key }}</div>
                 <div class="flex items-center h-full pl-4">
                     <span class="text-base font-semibold">{{ $group }}</span>
@@ -45,14 +56,21 @@
     @foreach ($settingGroups as $group => $items)
         @if ($activeTab === $group)
             <div wire:key="{{ $group }}"
-                class="filament-forms-card-component p-6 bg-white rounded-xl border border-gray-300 dark:border-gray-600 dark:bg-gray-800">
-                <h2 class="text-xl mb-2 font-bold">{{ $group }}</h2>
+                class="filament-forms-card-component p-6 bg-white rounded-xl border border-gray-300">
+                <h2 class="text-xl mb-2 font-bold flex items-center">
+                    {{ $group }}
+                    <div wire:loading.flex class="m-2">
+                        در حال انجام
+                        <x-spinner />
+                    </div>
+
+                </h2>
                 <div id="sortable">
                     @foreach ($items as $key => $item)
                         <div wire:key="{{ $group . $key }}" data-id="{{ $item['id'] }}"
                             class="flex flex-col mb-6 list-setting mt-5">
                             <label
-                                class="text-sm font-medium leading-4 text-gray-700 dark:text-gray-300 mb-2 flex justify-between items-center">
+                                class="text-sm font-medium leading-4 text-gray-700  mb-2 flex justify-between items-center">
                                 <div class="flex items-center mb-2">
                                     {{ $item['display_name'] }}
                                     <span class="handle">
@@ -63,7 +81,7 @@
                                     <button wire:loading.attr="disabled" wire:loading.class="!bg-primary-200"
                                         wire:target="destroySetting">
                                         <x-heroicon-o-trash
-                                            onclick="return confirm('Kaydı silmek istediğinize emin misiniz?') ? @this.destroySetting({{ $item['id'] }}) : false"
+                                            onclick="return confirm('آیا مطمئن هستید که می خواهید رکورد را حذف کنید؟') ? @this.destroySetting({{ $item['id'] }}) : false"
                                             class="w-5 h-5 hover:text-danger-500 cursor-pointer" />
                                     </button>
                                 @endif
@@ -83,14 +101,13 @@
         @endif
     @endforeach
     @if (config('filament-dynamic-settings-page.tool.enable'))
-        <div
-            class="filament-forms-card-component p-6 bg-white rounded-xl border border-gray-300 dark:border-gray-600 dark:bg-gray-800">
+        <div class="filament-forms-card-component p-6 bg-white rounded-xl border border-gray-300">
             <h2 class="text-xl mb-5 font-bold">
                 {{ __('filament-dynamic-settings-page::settings-resource.fields.card-header') }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
                 <input wire:model.lazy="newSetting.display_name" type="text"
                     placeholder="{{ __('filament-dynamic-settings-page::settings-resource.fields.name') }}"
-                    class="{{ $inputClass }} @error('newSetting.display_name') !border-danger-500 @enderror">
+                    class="{{ $inputClass }} @error('newSetting.display_name') !border-danger-500 @enderror bg-white">
                 <input wire:model.lazy="newSetting.key" type="text"
                     placeholder="{{ __('filament-dynamic-settings-page::settings-resource.fields.key') }}"
                     class="{{ $inputClass }} @error('newSetting.key') !border-danger-500 @enderror">

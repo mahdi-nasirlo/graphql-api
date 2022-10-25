@@ -1,11 +1,7 @@
 <input wire:model.lazy="form.{{ $item['id'] }}.value"
     style="border: 1px solid rgb(209 213 219/var(--tw-border-opacity));"
-    class="block w-full border-2 transition duration-75 rounded-lg shadow-sm focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 disabled:opacity-70 dark:bg-gray-700 dark:text-white dark:focus:border-primary-500 border-gray-100 p-1 dark:border-gray-600"
+    class="block w-full border-2 transition duration-75 rounded-lg shadow-sm focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 disabled:opacity-70  border-gray-100 p-1 "
     type="file">
-<div wire:loading.flex class="mt-2">
-    در حال آپلود
-    <x-spinner />
-</div>
 
 @if ($form[$item['id']]['value'] instanceof \Livewire\TemporaryUploadedFile)
     <span class="text-sm font-bold mt-1">پیش نمایش:</span>

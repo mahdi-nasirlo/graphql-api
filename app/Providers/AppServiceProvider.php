@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Filament\Facades\Filament;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\Vite;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,6 +27,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Filament::serving(
             function () {
+
+                Filament::registerTheme(
+                    app(Vite::class)('resources/css/filament.css'),
+                );
+
                 Filament::registerStyles([
                     '/resources/css/font.css',
                     asset('css/admin-font.css'),
