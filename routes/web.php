@@ -2,6 +2,7 @@
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Store\Product;
 use App\Models\User;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::view('index')->name('index');
+Route::view("/", "index")->name('index');
 
 Route::get("link", function () {
     Artisan::call("migrate");
@@ -26,7 +27,7 @@ Route::get("link", function () {
 });
 
 Route::name('store.')->prefix("store")->group(function () {
-    Route::get('/product/{product:slug}', function () {
-        return "success";
+    Route::get('/product/{product:slug}', function (Product $product) {
+        return view('page.store.single-product.index', compact('product'));
     })->name('product');
 });

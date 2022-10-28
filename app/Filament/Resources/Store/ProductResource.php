@@ -6,6 +6,8 @@ use App\Filament\Resources\Store\ProductResource\Pages;
 use App\Filament\Resources\Store\ProductResource\RelationManagers;
 use App\Models\Store\Product;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -29,7 +31,11 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('gallery'),
+                SpatieMediaLibraryFileUpload::make('avatar')
+                    ->multiple()
+                    ->responsiveImages()
+                    ->enableReordering()
+                    ->collection('product.gallery'),
                 Forms\Components\TextInput::make('cover')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('price')
@@ -70,14 +76,14 @@ class ProductResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -85,5 +91,5 @@ class ProductResource extends Resource
             'create' => Pages\CreateProduct::route('/create'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
-    }    
+    }
 }
