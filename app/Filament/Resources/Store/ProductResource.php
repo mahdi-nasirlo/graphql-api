@@ -14,6 +14,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Yepsua\Filament\Forms\Components\Rating;
 
 class ProductResource extends Resource
 {
@@ -31,6 +32,7 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
+                Rating::make('rating'),
                 SpatieMediaLibraryFileUpload::make('avatar')
                     ->multiple()
                     ->responsiveImages()

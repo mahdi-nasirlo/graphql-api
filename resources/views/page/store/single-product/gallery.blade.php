@@ -10,9 +10,9 @@
                 <div class="product-gallery">
                     <div class="product-gallery-preview order-sm-2">
                         @foreach ($gallery as $img)
-                            <div class="product-gallery-preview-item @once active @endonce"
-                                id="img-gallery-{{ $img->id }}"><img class="image-zoom" src="{{ $img->getUrl() }}"
-                                    data-zoom="{{ $img->getUrl() }}" alt="تصویر محصول">
+                            <div class=" product-gallery-preview-item @once active @endonce"
+                                id="img-gallery-{{ $img->id }}"><img class="image-zoom rounded border"
+                                    src="{{ $img->getUrl() }}" data-zoom="{{ $img->getUrl() }}" alt="تصویر محصول">
                                 <div class="image-zoom-pane"></div>
                             </div>
                         @endforeach
@@ -39,7 +39,7 @@
                     </div>
                     <div class="product-gallery-thumblist order-sm-1">
                         @foreach ($gallery as $img)
-                            <a class="product-gallery-thumblist-item @once active @endonce"
+                            <a class="border border-1 product-gallery-thumblist-item @once active @endonce"
                                 href="#img-gallery-{{ $img->id }}">
                                 <img src="{{ $img->getUrl() }}" alt="تصویر محصول">
                             </a>
@@ -68,12 +68,19 @@
             <!-- Product details-->
             <div class="col-lg-5 pt-4 pt-lg-0">
                 <div class="product-details ms-auto pb-3">
-                    <div class="d-flex justify-content-between align-items-center mb-2"><a href="#reviews" data-scroll>
-                            <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i
-                                    class="star-rating-icon ci-star-filled active"></i><i
-                                    class="star-rating-icon ci-star-filled active"></i><i
-                                    class="star-rating-icon ci-star-filled active"></i><i
-                                    class="star-rating-icon ci-star"></i>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <a href="#reviews" data-scroll>
+                            <div class="star-rating">
+                                @for ($i = 0; $i < 5; $i++)
+                                    @if ($i < $product->rating)
+                                        <i class="star-rating-icon ci-star-filled active"></i>
+                                    @else
+                                        <i class="star-rating-icon ci-star"></i>
+                                    @endif
+                                @endfor
+                                {{-- <i class="star-rating-icon ci-star-filled active"></i>
+                                <i class="star-rating-icon ci-star-filled active"></i>
+                                <i class="star-rating-icon ci-star-filled active"></i> --}}
                             </div><span class="d-inline-block fs-sm text-body align-middle mt-1 ms-1">74 نظر</span>
                         </a>
                         <button class="btn-wishlist me-0 me-lg-n3" type="button" data-bs-toggle="tooltip"

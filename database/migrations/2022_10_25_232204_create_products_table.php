@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('cover')->nullable();
             $table->bigInteger('price');
             $table->integer('inventory');
+            $table->string("rating");
             $table->dateTime('published_at')->nullable();
             $table->text('content')->nullable();
             $table->timestamps();

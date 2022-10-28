@@ -19,7 +19,8 @@ class Product extends Model implements HasMedia
         "cover",
         "gallery",
         "slug",
-        "name"
+        "name",
+        "rating"
     ];
 
     protected $casts = [
