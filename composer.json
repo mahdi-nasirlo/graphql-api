@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.0.2",
         "awcodes/filament-sticky-header": "^1.2",
+        "doctrine/dbal": "^3.5",
         "filament/filament": "^2.15",
         "filament/forms": "^2.15",
         "filament/spatie-laravel-media-library-plugin": "^2.16",

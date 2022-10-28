@@ -17,12 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
+Route::view('index')->name('index');
 
 Route::get("link", function () {
     Artisan::call("migrate");
     return "success";
+});
+
+Route::name('store.')->prefix("store")->group(function () {
+    Route::get('/product/{product:slug}', function () {
+        return "success";
+    })->name('product');
 });

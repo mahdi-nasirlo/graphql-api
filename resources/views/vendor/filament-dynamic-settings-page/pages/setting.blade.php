@@ -8,6 +8,7 @@
 
     <style>
         input {
+            color: black !important;
             background: white !important;
             border: 1px solid rgb(209 213 219 / var(--tw-border-opacity)) !important;
         }
