@@ -19,7 +19,10 @@ return new class extends Migration
             $table->text("desc")->nullable();
             $table->boolean("is_visible")->nullable()->default(0);
             $table->text("shortInfo")->nullable()->nullable();
+            $table->enum("type", ['api', 'web', 'blog'])->default('web');
             $table->string("cover")->nullable();
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->integer('level')->default(0);
             $table->timestamps();
         });
 

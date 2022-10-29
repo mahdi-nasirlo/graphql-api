@@ -9,5 +9,8 @@
         <a href="{{ route('store.product', $item) }}">
             {{ $item->name }}
         </a>
+        <i class="ci-arrow-down"></i>
     @endforeach
+
+    <x-bi-spotify />
 @endsection

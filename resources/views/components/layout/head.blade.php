@@ -26,6 +26,7 @@
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
     <!-- Google Tag Manager-->
     @livewireStyles
+    @bukStyles
 </head>
 
 <style>
@@ -34,5 +35,10 @@
         align-content: center;
         justify-content: center;
         align-items: center;
+    }
+
+    .dropdown-toggle::after {
+        display: none !important;
+        margin: 0 !important
     }
 </style>

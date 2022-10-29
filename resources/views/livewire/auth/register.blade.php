@@ -5,8 +5,7 @@
         novalidate="">
         <div class="mb-3">
             <label class="form-label" for="su-name">نام کامل</label>
-            <input wire:model='name' autocomplete="false" class="form-control" type="text" id="su-name"
-                required="">
+            <input wire:model='name' autocomplete="off" class="form-control" type="text" id="su-name" required="">
             <div class="invalid-feedback">لطفا نام خود را وارد کنید</div>
         </div>
         <div class="mb-3">
