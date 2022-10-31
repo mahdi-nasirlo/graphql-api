@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/", function () {
+    // dd(Category::with(['children'])->get());
+    return view('index');
+});
 
-Route::view("/", "index")->name('index');
+// Route::view("/", "index")->name('index');
 
 Route::get("link", function () {
     Artisan::call("migrate");

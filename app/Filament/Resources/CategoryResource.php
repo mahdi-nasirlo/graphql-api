@@ -53,7 +53,7 @@ class CategoryResource extends Resource
                     })
                     ->relationship('parent', 'name', fn (Builder $query, ?Category $record) => $query->whereNot('id', $record ? $record->id : null)),
                 Forms\Components\Toggle::make('is_visible'),
-                IconPicker::make('icone'),
+                IconPicker::make('icon'),
                 Forms\Components\Textarea::make('shortInfo')
                     ->maxLength(65535),
                 Forms\Components\TextInput::make('cover')

@@ -19,7 +19,8 @@ class Category extends Model implements HasMedia
         "name",
         "shortInfo",
         "cover",
-        'parent_id'
+        'parent_id',
+        'icon'
     ];
 
     public function brands()
@@ -32,8 +33,26 @@ class Category extends Model implements HasMedia
         return $this->belongsTo(Category::class, 'parent_id');
     }
 
-    public function children(): HasMany
+    // public function children(): HasMany
+    // {
+    //     return $this->hasMany(Category::class, 'parent_id');
+    // }
+
+    public function subcategories()
     {
         return $this->hasMany(Category::class, 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->subcategories()->with('children');
+    }
+
+    public function hasChildren()
+    {
+        if ($this->children->count()) {
+            return true;
+        }
+        return false;
     }
 }

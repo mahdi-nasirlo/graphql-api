@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("name");
             $table->text("desc")->nullable();
             $table->boolean("is_visible")->nullable()->default(0);
+            $table->string("icon")->nullable();
             $table->text("shortInfo")->nullable()->nullable();
             $table->enum("type", ['api', 'web', 'blog'])->default('web');
             $table->string("cover")->nullable();
