@@ -29,10 +29,10 @@
             </div><a class="fs-sm" href="#">فراموشی رمز ؟ </a>
         </div>
         <button class="btn-spinner btn btn-primary btn-shadow d-block w-100">
-            ورود
             <div wire:loading.delay wire:target="authenticate">
                 <x-spinner />
             </div>
+            ورود
         </button>
     </form>
 </div>

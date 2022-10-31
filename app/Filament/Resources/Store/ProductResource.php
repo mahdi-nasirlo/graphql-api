@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Store;
 
 use App\Filament\Resources\Store\ProductResource\Pages;
 use App\Filament\Resources\Store\ProductResource\RelationManagers;
+use App\Filament\Resources\Store\ProductResource\RelationManagers\AttributesRelationManager;
 use App\Models\Store\Product;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -32,7 +33,8 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Rating::make('rating'),
+                Rating::make('rating')
+                    ->required(),
                 SpatieMediaLibraryFileUpload::make('avatar')
                     ->multiple()
                     ->responsiveImages()
@@ -82,7 +84,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            AttributesRelationManager::class
         ];
     }
 

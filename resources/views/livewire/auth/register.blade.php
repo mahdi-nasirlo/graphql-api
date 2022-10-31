@@ -52,10 +52,10 @@
             </div>
         </div>
         <button class="btn-spinner btn btn-primary btn-shadow d-block w-100">
-            ثبت نام
             <div wire:loading.delay wire:target="saveUser">
                 <x-spinner />
             </div>
+            ثبت نام
         </button>
     </form>
 </div>

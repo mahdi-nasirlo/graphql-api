@@ -1,7 +1,7 @@
 <div>
     <style>
         .loader {
-            margin: 0 5px;
+            margin: 0 10px;
             display: flex;
             border: 4px solid #f3f3f3;
             /* Light grey */

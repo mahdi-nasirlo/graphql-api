@@ -36,4 +36,15 @@ class Product extends Model implements HasMedia
     {
         return $this->getMedia("product.gallery");
     }
+
+    public function attributes()
+    {
+        return $this->belongsToMany(
+            Attribute::class,
+            'attribute_product',
+            'product_id',
+            'attributes_id'
+        )
+            ->withPivot('value');
+    }
 }
