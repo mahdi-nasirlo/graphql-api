@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Store\CategoryListController;
+use App\Http\Livewire\Store\ProductList;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Store\Product;
@@ -34,4 +36,7 @@ Route::name('store.')->prefix("store")->group(function () {
     Route::get('/product/{product:slug}', function (Product $product) {
         return view('page.store.single-product.index', compact('product'));
     })->name('product');
+
+    Route::get("/categories/{category:name}", [CategoryListController::class, 'index'])->name('category.list');
+    Route::get("/products/{category}", ProductList::class)->name('product.list');
 });

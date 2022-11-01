@@ -20,7 +20,8 @@ class Category extends Model implements HasMedia
         "shortInfo",
         "cover",
         'parent_id',
-        'icon'
+        'icon',
+        'level'
     ];
 
     public function brands()

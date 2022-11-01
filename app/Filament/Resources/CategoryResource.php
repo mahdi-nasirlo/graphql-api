@@ -40,7 +40,7 @@ class CategoryResource extends Resource
                         'web' => 'web',
                         'blog' => 'blog'
                     ]),
-                Hidden::make('level'),
+                TextInput::make('level'),
                 Forms\Components\Select::make('parent_id')
                     ->label('دسته بندی پدر')
                     ->reactive()

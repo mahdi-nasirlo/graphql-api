@@ -3,14 +3,14 @@
         .loader {
             margin: 0 10px;
             display: flex;
-            border: 4px solid #f3f3f3;
+            border: 3px solid #f3f3f3;
             /* Light grey */
-            border-top: 4px solid #ff0000;
+            border-top: 3px solid #ff0000;
             /* Blue */
             border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            animation: spin 2s linear infinite;
+            width: 20px;
+            height: 20px;
+            animation: spin 150ms linear infinite;
         }
 
         @keyframes spin {

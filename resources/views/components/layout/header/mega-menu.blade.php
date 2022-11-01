@@ -22,10 +22,11 @@
 
                 @foreach ($categories as $category)
                     <li class="dropdown mega-dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            {{-- <x-icon class="ci-laptop opacity-60 fs-lg me-2" name="{{ $category->icon }}"
-                                        /> --}}
-                            {{-- <i class="ci-laptop opacity-60 fs-lg mt-n1 me-2"></i> --}}
+                        <a class="dropdown-item dropdown-toggle" href="{{ route('store.category.list', $category) }}"
+                            data-bs-toggle="dropdown">
+                            @if ($category->icon)
+                                <x-icon class="ci-laptop opacity-60 fs-lg me-2" name="{{ $category->icon }}" />
+                            @endif
                             {{ $category->name }}
                         </a>
                         @if ($category->hasChildren())
