@@ -13,6 +13,10 @@ class ProductList extends Component
 
     public function mount()
     {
+        if (!$this->category->products()->count()) {
+            return redirect(route('home'));
+        }
+
         $this->category->load('products');
     }
 
@@ -29,6 +33,6 @@ class ProductList extends Component
     public function render()
     {
         return view('livewire.store.product-list')
-            ->layout('layouts.base');
+            ->layout('layout.master');
     }
 }

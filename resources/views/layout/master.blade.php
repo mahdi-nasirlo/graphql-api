@@ -14,7 +14,9 @@
         <x-layout.header.index />
 
         @yield('content')
-
+        @if (isset($slot) and $slot !== null)
+            {{ $slot }}
+        @endif
         <x-layout.toolbar />
 
         <x-layout.script />

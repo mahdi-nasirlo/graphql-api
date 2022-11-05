@@ -42,6 +42,8 @@ class CategoryResource extends Resource
                     ]),
                 TextInput::make('level')->default(0),
                 Forms\Components\Select::make('parent_id')
+                    ->searchable()
+                    ->preload()
                     ->label('دسته بندی پدر')
                     ->reactive()
                     ->afterStateUpdated(function (Closure $set, $state) {

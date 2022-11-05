@@ -2,10 +2,8 @@
 
 use App\Http\Controllers\Store\CategoryListController;
 use App\Http\Livewire\Store\ProductList;
-use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Store\Product;
-use App\Models\User;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -20,18 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get("/", function () {
-    // dd(Category::with(['children'])->get());
-    // dd(Product::find(1)->category);
-
-    // $product = Product::find(1);
-
-    // if ($product) {
-    //     dd($product->category);
-    // }
-
+    // dd(Category::find(3)->products);
     return view('index');
-});
+})->name('home');
 
 // Route::view("/", "index")->name('index');
 
