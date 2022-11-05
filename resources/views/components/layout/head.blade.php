@@ -26,7 +26,7 @@
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
     <!-- Google Tag Manager-->
     @livewireStyles
-    @bukStyles
+    {{-- @bukStyles --}}
 </head>
 
 <style>

@@ -10,4 +10,4 @@
 <script src="js/theme.min.js"></script>
 
 @livewireScripts
-@bukScripts
+{{-- @bukScripts --}}

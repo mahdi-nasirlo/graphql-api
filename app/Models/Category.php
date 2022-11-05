@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Store\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -55,5 +56,10 @@ class Category extends Model implements HasMedia
             return true;
         }
         return false;
+    }
+
+    public function products()
+    {
+        return $this->morphedByMany(Product::class, 'categoryable');
     }
 }

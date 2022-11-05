@@ -2,6 +2,7 @@
 
 namespace App\Models\Store;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
@@ -46,5 +47,13 @@ class Product extends Model implements HasMedia
             'attributes_id'
         )
             ->withPivot('value');
+    }
+
+    public function category()
+    {
+        return $this->morphToMany(
+            Category::class,
+            "categoryable",
+        );
     }
 }

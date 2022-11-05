@@ -22,6 +22,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
     // dd(Category::with(['children'])->get());
+    // dd(Product::find(1)->category);
+
+    // $product = Product::find(1);
+
+    // if ($product) {
+    //     dd($product->category);
+    // }
+
     return view('index');
 });
 
@@ -37,6 +45,6 @@ Route::name('store.')->prefix("store")->group(function () {
         return view('page.store.single-product.index', compact('product'));
     })->name('product');
 
-    Route::get("/categories/{category:name}", [CategoryListController::class, 'index'])->name('category.list');
+    Route::get("/categories/{category}", [CategoryListController::class, 'index'])->name('category.list');
     Route::get("/products/{category}", ProductList::class)->name('product.list');
 });

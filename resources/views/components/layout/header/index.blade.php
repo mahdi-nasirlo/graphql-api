@@ -40,8 +40,8 @@
                             <div class="navbar-tool dropdown ms-3">
                                 <a class="navbar-tool-icon-box bg-secondary dropdown-toggle"
                                     href="{{ route('filament.pages.dashboard') }}">
-                                    <img style="margin-top: 2px" width="40"
-                                        src="{{ Avatar::create(auth()->user()->name)->toBase64() }}" />
+                                    {{-- <img style="margin-top: 2px" width="40"
+                                        src="{{ Avatar::create(auth()->user()->name)->toBase64() }}" /> --}}
                                 </a>
                                 <!-- Cart dropdown-->
                                 <div class="dropdown-menu dropdown-menu-end">
@@ -52,13 +52,13 @@
                                             pb-2 border-bottom">
                                             <div class="d-flex align-items-center">
                                                 <span class="d-block flex-shrink-0">
-                                                    <x-ri-account-pin-circle-fill />
+                                                    {{-- <x-ri-account-pin-circle-fill /> --}}
                                                 </span>
                                                 <div class="ps-2">
                                                     <h6 class="widget-product-title">
                                                         <a class="w-100"
                                                             href="{{ route('filament.pages.dashboard') }}">
-                                                            <x-ri-account-pin-circle-fill style="width: 20px" />
+                                                            {{-- <x-ri-account-pin-circle-fill style="width: 20px" /> --}}
                                                             پنل کاربری
                                                         </a>
                                                     </h6>
@@ -115,8 +115,7 @@
                                                         <a href="shop-single-v2.html">هدفون</a>
                                                     </h6>
                                                     <div class="widget-product-meta">
-                                                        <span
-                                                            class="text-accent me-2">122.<small>00</small></span><span
+                                                        <span class="text-accent me-2">122.<small>00</small></span><span
                                                             class="text-muted">x
                                                             1</span>
                                                     </div>
