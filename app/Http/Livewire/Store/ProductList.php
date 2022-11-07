@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Store;
 
+use App\Http\Filters\AttributesFilter;
 use App\Models\Category;
 use App\Models\Store\Product;
+use Illuminate\Pipeline\Pipeline;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -13,9 +15,13 @@ class ProductList extends Component
 
     public Category $category;
 
+    public $attributes = [];
+
     public $modalProduct;
 
-    // protected $paginationTheme = 'bootstrap';
+    public $queryString = [
+        'attributes'
+    ];
 
     public function paginationView()
     {
@@ -27,23 +33,41 @@ class ProductList extends Component
         if (!$this->category->products()->count()) {
             return redirect(route('home'));
         }
-
         $this->category->load('products');
     }
 
-    public function test()
+    public function updateWithFilter(Product $product)
     {
-        dd("ljk");
-    }
-
-    public function changeModalData(Product $product)
-    {
-        $this->modalProduct = $product;
+        $posts = app(Pipeline::class)
+            ->send(Product::query()
+                ->where('category_id', $this->category->id)
+                ->with(['attributes']))
+            ->through([
+                new AttributesFilter($this->attributes)
+            ])
+            ->thenReturn()
+            ->get();
     }
 
     public function render()
     {
-        $products = $this->category->products()->paginate(1);
+        $products =
+            app(Pipeline::class)
+            ->send(Product::query()
+                ->where('category_id', $this->category->id)
+                ->with(['attributes']))
+            ->through([
+                new AttributesFilter($this->attributes)
+            ])
+            ->thenReturn()
+            ->get();
+
+        // ->with(['category', 'attributes'])
+        // ->where('category_id', $this->category->id)
+        // ->whereHas('attributes', function ($query) {
+        //     $query->whereIn('name', $this->attributes);
+        // })
+        // ->paginate(10);
 
         return view('livewire.store.product-list', compact('products'))
             ->layout('layout.master');

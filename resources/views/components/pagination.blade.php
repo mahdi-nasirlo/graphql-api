@@ -14,7 +14,7 @@
                 </li>
             @else
                 <li class="page-item">
-                    {{-- <button wire:click="previousPage">a</button> --}}
+                    <button wire:click="previousPage">a</button>
                     <a class="page-link" wire:click="previousPage" href="">
                         <i class="ci-arrow-left me-2"></i>قبلی
                     </a>

@@ -22,7 +22,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
 
-    return view('index');
+    $product = Product::query()->where("category_id", 5)->with(['attributes', 'category'])->whereHas('attributes', function ($query) {
+        $query->whereIn('name', ['رنگ'])->whereIn('value', ['مهتابی']);
+    })->get();
+
+    return view('index', compact('product'));
 })->name('home');
 
 // Route::view("/", "index")->name('index');
