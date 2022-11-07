@@ -72,6 +72,6 @@ class Category extends Model implements HasMedia
 
     public function products()
     {
-        return $this->morphedByMany(Product::class, 'categoryable');
+        return $this->hasMany(Product::class);
     }
 }

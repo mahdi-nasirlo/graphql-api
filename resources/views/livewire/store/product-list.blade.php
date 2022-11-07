@@ -58,7 +58,7 @@
                 <!-- Products grid-->
 
                 <div class="row mx-n2">
-                    @foreach ($category->products as $item)
+                    @foreach ($products as $product)
                         <div class="col-md-4 col-sm-6 px-2 mb-4">
                             <div class="card product-card">
                                 <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip"
@@ -66,17 +66,17 @@
                                     <i class="ci-heart"></i>
                                 </button>
                                 <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html">
-                                    <img src="{{ asset($item->cover ? "/storage/$item->cover" : '/placeholder.jpg') }}"
-                                        alt="{{ $item->name }}">
+                                    <img src="{{ asset($product->cover ? "/storage/$product->cover" : '/placeholder.jpg') }}"
+                                        alt="{{ $product->name }}">
                                 </a>
                                 <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1"
                                         href="#">{{ $category->name }}</a>
                                     <h3 class="product-title fs-sm"><a
-                                            href="shop-single-v1.html">{{ $item->name }}</a>
+                                            href="shop-single-v1.html">{{ $product->name }}</a>
                                     </h3>
                                     <div class="d-flex justify-content-between">
                                         <div class="product-price"><span class="text-accent">
-                                                <strong>{{ number_format($item->price) }}</strong>
+                                                <strong>{{ number_format($product->price) }}</strong>
                                                 <small>تومان</small>
                                             </span>
                                         </div>
@@ -110,7 +110,7 @@
                                     <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i
                                             class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
                                     <div class="text-center">
-                                        <a wire:click='changeModalData({{ $item }})'
+                                        <a wire:click='changeModalData({{ $product }})'
                                             class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal">
                                             <i class="ci-eye align-middle me-1">
                                             </i>مشاهده
@@ -123,26 +123,8 @@
                 </div>
                 <hr class="my-3">
                 <!-- Pagination-->
-                <nav class="d-flex justify-content-between pt-2" aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i
-                                    class="ci-arrow-left me-2"></i>قبلی</a>
-                        </li>
-                    </ul>
-                    <ul class="pagination">
-                        <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
-                        <li class="page-item active d-none d-sm-block" aria-current="page"><span
-                                class="page-link">1<span class="visually-hidden">(جاری)</span></span></li>
-                        <li class="page-item d-none d-sm-block"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a></li>
-                    </ul>
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#" aria-label="Next">بعدی<i
-                                    class="ci-arrow-right ms-2"></i></a></li>
-                    </ul>
-                </nav>
+
+                {{ $products->links() }}
             </section>
         </div>
     </div>

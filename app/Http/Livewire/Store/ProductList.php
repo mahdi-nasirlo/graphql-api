@@ -5,11 +5,22 @@ namespace App\Http\Livewire\Store;
 use App\Models\Category;
 use App\Models\Store\Product;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ProductList extends Component
 {
+    use WithPagination;
+
     public Category $category;
+
     public $modalProduct;
+
+    // protected $paginationTheme = 'bootstrap';
+
+    public function paginationView()
+    {
+        return 'components.pagination';
+    }
 
     public function mount()
     {
@@ -32,7 +43,9 @@ class ProductList extends Component
 
     public function render()
     {
-        return view('livewire.store.product-list')
+        $products = $this->category->products()->paginate(1);
+
+        return view('livewire.store.product-list', compact('products'))
             ->layout('layout.master');
     }
 }
