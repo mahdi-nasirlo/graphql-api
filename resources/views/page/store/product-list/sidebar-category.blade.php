@@ -9,6 +9,7 @@
 // TODO: add number of product to category
 // TODO: display visible categgory 
 // FIXME make first category is open
+// TODO add brand filter 
 --}}
 
 @php

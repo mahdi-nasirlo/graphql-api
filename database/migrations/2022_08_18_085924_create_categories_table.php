@@ -27,11 +27,11 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('categoryables', function (Blueprint $table) {
-            $table->morphs("categoryable");
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on("categories");
-        });
+        // Schema::create('categoryables', function (Blueprint $table) {
+        //     $table->morphs("categoryable");
+        //     $table->unsignedBigInteger('category_id');
+        //     $table->foreign('category_id')->references('id')->on("categories");
+        // });
     }
 
     /**

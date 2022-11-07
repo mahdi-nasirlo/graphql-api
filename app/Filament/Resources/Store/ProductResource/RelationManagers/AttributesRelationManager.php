@@ -3,10 +3,12 @@
 namespace App\Filament\Resources\Store\ProductResource\RelationManagers;
 
 use App\Models\Store\Attribute;
+use App\Models\Store\Product;
 use Closure;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -19,7 +21,9 @@ use Filament\Tables\Actions\AttachAction;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\TagsColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Contracts\HasRelationshipTable;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AttributesRelationManager extends RelationManager
@@ -72,7 +76,12 @@ class AttributesRelationManager extends RelationManager
                         'string' => "متن",
                         'boolean' => 'دارد یا ندارد'
                     ]),
-                // Hidden::make('values')
+
+                Hidden::make('category_id')
+                    ->default(function (RelationManager $livewire) {
+                        return $livewire->ownerRecord->category_id;
+                    }),
+
                 TagsInput::make('values')
                     ->label('مقادیر')
                     ->reactive()
@@ -126,6 +135,10 @@ class AttributesRelationManager extends RelationManager
                     ->form(fn (AttachAction $action): array => [
                         $action->getRecordSelect()
                             ->reactive(),
+                        Hidden::make('category_id')
+                            ->default(function (RelationManager $livewire) {
+                                return $livewire->ownerRecord->category_id;
+                            }),
                         Select::make('value')
                             ->required()
                             ->label('مقدار مربوط به محصول')
@@ -134,7 +147,7 @@ class AttributesRelationManager extends RelationManager
                                 return Attribute::find($get('recordId'))->values ?? ['دارد' => 'دارد', 'ندارد' => 'ندارد'];
                             })
                             ->hidden(fn (Closure $get) => $get('recordId') === null)
-                    ])
+                    ]),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

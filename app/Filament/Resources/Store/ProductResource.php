@@ -23,6 +23,8 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Yepsua\Filament\Forms\Components\Rating;
 
+// TODO mask product price field
+
 class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
@@ -34,6 +36,7 @@ class ProductResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->autocomplete('off')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
@@ -55,11 +58,11 @@ class ProductResource extends Resource
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\Textarea::make('content')
                     ->maxLength(65535),
-                Select::make('category')
+                Select::make('category_id')
+                    ->required()
                     ->searchable()
                     ->preload()
                     ->relationship('category', 'name')
-                    ->multiple()
                     ->createOptionForm([
                         Forms\Components\TextInput::make('name')
                             ->required()

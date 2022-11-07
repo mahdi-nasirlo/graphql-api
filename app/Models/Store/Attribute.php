@@ -30,10 +30,21 @@ class Attribute extends Model
     {
         return $this->belongsToMany(
             Product::class,
-            'attribute_product',
+            'attribute_category_product',
             'attributes_id',
             'product_id',
         )
-            ->withPivot('value');
+            ->withPivot(['value', 'category_id']);
+    }
+
+    public function category()
+    {
+        return $this->belongsToMany(
+            Product::class,
+            'attribute_category_product',
+            'attributes_id',
+            'category_id',
+        )
+            ->withPivot(['value', 'category_id']);
     }
 }

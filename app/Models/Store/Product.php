@@ -21,7 +21,8 @@ class Product extends Model implements HasMedia
         "gallery",
         "slug",
         "name",
-        "rating"
+        "rating",
+        "category_id"
     ];
 
     protected $casts = [
@@ -42,18 +43,24 @@ class Product extends Model implements HasMedia
     {
         return $this->belongsToMany(
             Attribute::class,
-            'attribute_product',
+            'attribute_category_product',
             'product_id',
             'attributes_id'
         )
-            ->withPivot('value');
+            ->withPivot(['value', 'category_id']);
     }
 
+    // public function category()
+    // {
+    //     return $this->morphToMany(
+    //         Category::class,
+    //         "categoryable",
+    //     );
+    // }
+
+    //TODO: get category just has web type
     public function category()
     {
-        return $this->morphToMany(
-            Category::class,
-            "categoryable",
-        );
+        return $this->belongsTo(Category::class);
     }
 }

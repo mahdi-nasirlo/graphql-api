@@ -3,6 +3,7 @@
 use App\Http\Controllers\Store\CategoryListController;
 use App\Http\Livewire\Store\ProductList;
 use App\Models\Category;
+use App\Models\Store\Attribute;
 use App\Models\Store\Product;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get("/", function () {
-    // dd(Category::find(3)->products);
+
     return view('index');
 })->name('home');
 
