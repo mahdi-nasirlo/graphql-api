@@ -50,11 +50,11 @@
                                             data-simplebar-auto-hide="false
                                             <div class="widget-cart-item
                                             pb-2 border-bottom">
-                                            <div class="d-flex align-items-center">
+                                            <div class="w-100">
                                                 <span class="d-block flex-shrink-0">
                                                     {{-- <x-ri-account-pin-circle-fill /> --}}
                                                 </span>
-                                                <div class="ps-2">
+                                                <div class="p-2 border-bottom">
                                                     <h6 class="widget-product-title">
                                                         <a class="w-100"
                                                             href="{{ route('filament.pages.dashboard') }}">
@@ -63,6 +63,15 @@
                                                         </a>
                                                     </h6>
                                                 </div>
+                                                <div class="p-2 border-bottom">
+                                                    <h6 class="widget-product-title">
+                                                        <a class="w-100" href="{{ route('profile.dashboard') }}">
+                                                            {{-- <x-ri-account-pin-circle-fill style="width: 20px" /> --}}
+                                                            داشبورد
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                {{-- <div class="dropdown-divider"></div> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -77,9 +86,10 @@
                             </a>
                         @endif
                         <div class="navbar-tool dropdown ms-3"><a
-                                class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="shop-cart.html"><span
-                                    class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a
-                                class="navbar-tool-text" href="shop-cart.html"><small>سبدخرید</small>1,247.00</a>
+                                class="navbar-tool-icon-box bg-secondary dropdown-toggle"
+                                href="{{ route('cart.index') }}"><span class="navbar-tool-label">4</span><i
+                                    class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text"
+                                href="{{ route('cart.index') }}"><small>سبدخرید</small>1,247.00</a>
                             <!-- Cart dropdown-->
                             <div class="dropdown-menu dropdown-menu-end">
                                 <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
@@ -115,7 +125,8 @@
                                                         <a href="shop-single-v2.html">هدفون</a>
                                                     </h6>
                                                     <div class="widget-product-meta">
-                                                        <span class="text-accent me-2">122.<small>00</small></span><span
+                                                        <span
+                                                            class="text-accent me-2">122.<small>00</small></span><span
                                                             class="text-muted">x
                                                             1</span>
                                                     </div>
@@ -669,60 +680,19 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                                data-bs-toggle="dropdown">مستندات</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">
-                                        <div class="d-flex">
-                                            <div class="lead text-muted pt-1">
-                                                <i class="ci-book"></i>
-                                            </div>
-                                            <div class="ms-2"><span class="d-block text-heading">اسناد</span><small
-                                                    class="d-block text-muted">شروع
-                                                    به
-                                                    سفارش</small>
-                                            </div>
-                                        </div>
-                                    </a></li>
-                                <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">
-                                        <div class="d-flex">
-                                            <div class="lead text-muted pt-1">
-                                                <i class="ci-server"></i>
-                                            </div>
-                                            <div class="ms-2"><span class="d-block text-heading">اجزا<span
-                                                        class="badge bg-info ms-2">40+</span></span><small
-                                                    class="d-block text-muted">ساخت
-                                                    سریعتر</small>
-                                            </div>
-                                        </div>
-                                    </a></li>
-                                <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">
-                                        <div class="d-flex">
-                                            <div class="lead text-muted pt-1">
-                                                <i class="ci-edit"></i>
-                                            </div>
-                                            <div class="ms-2"><span class="d-block text-heading">تغییرات<span
-                                                        class="badge bg-success ms-2">v2.4.0</span></span><small
-                                                    class="d-block text-muted">بروز
-                                                    رسانی</small>
-                                            </div>
-                                        </div>
-                                    </a></li>
-                                <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">
-                                        <div class="d-flex">
-                                            <div class="lead text-muted pt-1">
-                                                <i class="ci-help"></i>
-                                            </div>
-                                            <div class="ms-2"><span
-                                                    class="d-block text-heading">پشتیبانی</span><small
-                                                    class="d-block text-muted">setinco@gmail.com</small>
-                                            </div>
-                                        </div>
-                                    </a></li>
-                            </ul>
+                        <li class="nav-item dropdown">
+                            <a onclick="window.location.replace('{{ route('support') }}')"
+                                class="nav-link dropdown-toggle" href="{{ route('support') }}"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                سوالی دارید؟
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a onclick="window.location.replace('{{ route('contactUs') }}')"
+                                class="nav-link dropdown-toggle" href="{{ route('contactUs') }}"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                ارتباط با ما
+                            </a>
                         </li>
                     </ul>
                 </div>

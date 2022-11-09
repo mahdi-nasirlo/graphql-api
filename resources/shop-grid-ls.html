@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+
+<head>
+    <meta charset="utf-8">
+    <title>کاتزیلا |  لیست محصولات</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Cartzilla - Bootstrap E-commerce Template">
+    <meta name="keywords" content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean">
+    <meta name="author" content="گروه ستین">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#fe6a6a" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/nouislider/dist/nouislider.min.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/drift-zoom/dist/drift-basic.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+    <!-- Google Tag Manager-->
+
+  </head>
+  <!-- Body-->
+  <body class="handheld-toolbar-enabled">
+    <!-- Google Tag Manager (noscript)-->
+
+    <!-- ورود/ثبت نام modal-->
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary">
+            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+              <li class="nav-item"><a class="nav-link fw-medium active" href="#signin-tab" data-bs-toggle="tab" role="tab" aria-selected="true"><i class="ci-unlocked me-2 mt-n1"></i>ورود</a></li>
+              <li class="nav-item"><a class="nav-link fw-medium" href="#signup-tab" data-bs-toggle="tab" role="tab" aria-selected="false"><i class="ci-user me-2 mt-n1"></i>ثبت نام</a></li>
+            </ul>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body tab-content py-4">
+            <form class="needs-validation tab-pane fade show active" autocomplete="off" novalidate id="signin-tab">
+              <div class="mb-3">
+                <label class="form-label" for="si-email">آدرس ایمیل</label>
+                <input class="form-control" type="email" id="si-email" placeholder="setin@gmail.com" required>
+                <div class="invalid-feedback">لطفا یک آدرس ایمیل معتبر ارائه کنید</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="si-password">پسورد</label>
+                <div class="password-toggle">
+                  <input class="form-control" type="password" id="si-password" required>
+                  <label class="password-toggle-btn" aria-label="نمایش/پنهان کردن">
+                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3 d-flex flex-wrap justify-content-between">
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="si-remember">
+                  <label class="form-check-label" for="si-remember">به خاطر سپردن</label>
+                </div><a class="fs-sm" href="#">فراموشی رمز ؟ </a>
+              </div>
+              <button class="btn btn-primary btn-shadow d-block w-100" type="submit">ورود</button>
+            </form>
+            <form class="needs-validation tab-pane fade" autocomplete="off" novalidate id="signup-tab">
+              <div class="mb-3">
+                <label class="form-label" for="su-name">نام کامل</label>
+                <input class="form-control" type="text" id="su-name" placeholder="ستین کارتزیلا" required>
+                <div class="invalid-feedback">لطفا نام خود را وارد کنید</div>
+              </div>
+              <div class="mb-3">
+                <label for="su-email">آدرس ایمیل</label>
+                <input class="form-control" type="email" id="su-email" placeholder="setin@gmail.com" required>
+                <div class="invalid-feedback">لطفا یک آدرس ایمیل معتبر ارائه کنید</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="su-password">پسورد</label>
+                <div class="password-toggle">
+                  <input class="form-control" type="password" id="su-password" required>
+                  <label class="password-toggle-btn" aria-label="نمایش/پنهان کردن">
+                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="su-password-confirm">تکرار پسورد</label>
+                <div class="password-toggle">
+                  <input class="form-control" type="password" id="su-password-confirm" required>
+                  <label class="password-toggle-btn" aria-label="نمایش/پنهان کردن">
+                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-shadow d-block w-100" type="submit">ثبت نام</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Quick View Modal-->
+      <div class="modal-quick-view modal fade" id="quick-view" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title product-title"><a href="shop-single-v1.html" data-bs-toggle="tooltip" data-bs-placement="right" title="دیدن محصول">هودی اسپرت<i class="ci-arrow-right fs-lg ms-2"></i></a></h4>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <!-- گالری محصولات-->
+                <div class="col-lg-7 pe-lg-0">
+                  <div class="product-gallery">
+                    <div class="product-gallery-preview order-sm-2">
+                      <div class="product-gallery-preview-item active" id="first"><img class="image-zoom" src="img/shop/single/gallery/01.jpg" data-zoom="img/shop/single/gallery/01.jpg" alt="تصویر محصول">
+                        <div class="image-zoom-pane"></div>
+                      </div>
+                      <div class="product-gallery-preview-item" id="second"><img class="image-zoom" src="img/shop/single/gallery/02.jpg" data-zoom="img/shop/single/gallery/02.jpg" alt="تصویر محصول">
+                        <div class="image-zoom-pane"></div>
+                      </div>
+                      <div class="product-gallery-preview-item" id="third"><img class="image-zoom" src="img/shop/single/gallery/03.jpg" data-zoom="img/shop/single/gallery/03.jpg" alt="تصویر محصول">
+                        <div class="image-zoom-pane"></div>
+                      </div>
+                      <div class="product-gallery-preview-item" id="fourth"><img class="image-zoom" src="img/shop/single/gallery/04.jpg" data-zoom="img/shop/single/gallery/04.jpg" alt="تصویر محصول">
+                        <div class="image-zoom-pane"></div>
+                      </div>
+                    </div>
+                    <div class="product-gallery-thumblist order-sm-1"><a class="product-gallery-thumblist-item active" href="#first"><img src="img/shop/single/gallery/th01.jpg" alt="تصویر محصول"></a><a class="product-gallery-thumblist-item" href="#second"><img src="img/shop/single/gallery/th02.jpg" alt="تصویر محصول"></a><a class="product-gallery-thumblist-item" href="#third"><img src="img/shop/single/gallery/th03.jpg" alt="تصویر محصول"></a><a class="product-gallery-thumblist-item" href="#fourth"><img src="img/shop/single/gallery/th04.jpg" alt="تصویر محصول"></a></div>
+                  </div>
+                </div>
+                <!-- Product details-->
+                <div class="col-lg-5 pt-4 pt-lg-0 image-zoom-pane">
+                  <div class="product-details ms-auto pb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2"><a href="shop-single-v1.html#reviews">
+                        <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                        </div><span class="d-inline-block fs-sm text-body align-middle mt-1 ms-1">74 نظر</span></a>
+                      <button class="btn-wishlist" type="button" data-bs-toggle="tooltip" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button>
+                    </div>
+                    <div class="mb-3"><span class="h3 fw-normal text-accent me-1">18.<small>99</small></span>
+                      <del class="text-muted fs-lg me-3">25.<small>00</small></del><span class="badge bg-danger badge-shadow align-middle mt-n2">تخفیف</span>
+                    </div>
+                    <div class="fs-sm mb-4"><span class="text-heading fw-medium me-1">رنگ:</span><span class="text-muted" id="colorOptionText">قرمز/تاریک</span></div>
+                    <div class="position-relative me-n4 mb-3">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="color1" data-bs-label="colorOptionText" value="قرمز/تاریک" checked>
+                        <label class="form-option-label rounded-circle" for="color1"><span class="form-option-color rounded-circle" style="background-image: url(img/shop/single/color-opt-1.png)"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="color2" data-bs-label="colorOptionText" value="سفید/سیاه">
+                        <label class="form-option-label rounded-circle" for="color2"><span class="form-option-color rounded-circle" style="background-image: url(img/shop/single/color-opt-2.png)"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="color3" data-bs-label="colorOptionText" value="سفید/سیاه">
+                        <label class="form-option-label rounded-circle" for="color3"><span class="form-option-color rounded-circle" style="background-image: url(img/shop/single/color-opt-3.png)"></span></label>
+                      </div>
+                      <div class="product-badge product-available mt-n1"><i class="ci-security-check"></i>ویژگی محصول</div>
+                    </div>
+                    <form class="mb-grid-gutter">
+                      <div class="mb-3">
+                        <label class="fw-medium pb-1" for="product-size">سایز : </label>
+                        <select class="form-select" required id="product-size">
+                          <option value="">انتخاب سایز</option>
+                          <option value="xs">XS</option>
+                          <option value="s">S</option>
+                          <option value="m">M</option>
+                          <option value="l">L</option>
+                          <option value="xl">XL</option>
+                        </select>
+                      </div>
+                      <div class="mb-3 d-flex align-items-center">
+                        <select class="form-select me-3" style="width: 5rem;">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <button class="btn btn-primary btn-shadow d-block w-100" type="submit"><i class="ci-cart fs-lg me-2"></i>اضافه کردن به سبدخرید</button>
+                      </div>
+                    </form>
+                    <h5 class="h6 mb-3 pb-2 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>اطلاعات محصول</h5>
+                    <h6 class="fs-sm mb-2">سبک</h6>
+                    <ul class="fs-sm ps-4">
+                      <li>بالا</li>
+                    </ul>
+                    <h6 class="fs-sm mb-2">ترکیب بندی</h6>
+                    <ul class="fs-sm ps-4">
+                        <li>دنده الاستیک: پنبه 95 </li>
+                        <li>پوشش: پنبه 100</li>
+                     <li>پنبه 80٪ ، پلی استر 20٪</li>
+                    </ul>
+                    <h6 class="fs-sm mb-2">هنری</h6>
+                    <ul class="fs-sm ps-4 mb-0">
+                      <li>183260098</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar 3 Level (Light)-->
+      <header class="shadow-sm">
+        <!-- Topbar-->
+        <div class="topbar topbar-dark bg-dark">
+          <div class="container">
+            <div class="topbar-text dropdown d-md-none"><a class="topbar-link dropdown-toggle" href="#" data-bs-toggle="dropdown">لینک ها</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="tel:00331697720"><i class="ci-support text-muted me-2"></i>09162352304</a></li>
+                <li><a class="dropdown-item" href="order-tracking.html"><i class="ci-location text-muted me-2"></i>رهیگیری سفارش</a></li>
+              </ul>
+            </div>
+            <div class="topbar-text text-nowrap d-none d-md-inline-block"><i class="ci-support"></i><span class="text-muted me-1">پشتیبانی</span><a class="topbar-link" href="tel:00331697720">09162352304</a></div>
+            <div class="tns-carousel  tns-controls-static d-none d-md-block">
+              <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;nav&quot;: false}">
+                 <div class="topbar-text">ارسال رایگان با سفارش بیش از 200 </div>
+                <div class="topbar-text">ما ظرف 30 روز پول برمی گردانیم</div>
+               <div class="topbar-text">دوستانه 24/7 پشتیبانی مشتری</div>
+              </div>
+            </div>
+            <div class="ms-3 text-nowrap"><a class="topbar-link me-4 d-none d-md-inline-block" href="order-tracking.html"><i class="ci-location"></i>رهیگیری سفارش</a>
+              <div class="topbar-text dropdown disable-autohide"><a class="topbar-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><img class="me-2" src="img/flags/en.png" width="20" alt="English">انگلیسی</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li class="dropdown-item">
+                    <select class="form-select form-select-sm">
+                      <option value="usd">دلار</option>
+                      <option value="eur">تومان</option>
+                       <option value="ukp">یورو</option>
+                           <option value="jpy">پوند</option>
+                    </select>
+                  </li>
+                  <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="img/flags/fr.png" width="20" alt="فرانسه">فرانسه</a></li>
+                   <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="img/flags/de.png" width="20" alt="آلمان">آلمان</a></li>
+                  <li><a class="dropdown-item" href="#"><img class="me-2" src="img/flags/it.png" width="20" alt="ایتالیا">ایتالیا</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+        <div class="navbar-sticky bg-light">
+          <div class="navbar navbar-expand-lg navbar-light">
+            <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" href="index-2.html"><img src="img/logo-dark.png" width="142" alt="کارتزیلا"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index-2.html"><img src="img/logo-icon.png" width="74" alt="کارتزیلا"></a>
+              <div class="input-group d-none d-lg-flex mx-4">
+                <input class="form-control rounded-end pe-5" type="text" placeholder="جستجو برای محصول"><i class="ci-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
+              </div>
+              <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool navbar-stuck-toggler" href="#"><span class="navbar-tool-tooltip">منو</span>
+                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-menu"></i></div></a><a class="navbar-tool d-none d-lg-flex" href="account-wishlist.html"><span class="navbar-tool-tooltip">علاقه مندی</span>
+                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-heart"></i></div></a><a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="#signin-modal" data-bs-toggle="modal">
+                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-user"></i></div>
+                  <div class="navbar-tool-text ms-n3"><small>سلام وارد شوید</small>حساب من</div></a>
+                <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="shop-cart.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="shop-cart.html"><small>سبدخرید</small>25600</a>
+                  <!-- Cart dropdown-->
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
+                      <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
+                        <div class="widget-cart-item pb-2 border-bottom">
+                          <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                          <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/01.jpg" width="64" alt="محصول"></a>
+                            <div class="ps-2">
+                              <h6 class="widget-product-title"><a href="shop-single-v1.html">کفش کتانی</a></h6>
+                              <div class="widget-product-meta"><span class="text-accent me-2">150<small>00</small></span><span class="text-muted">x 1</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="widget-cart-item py-2 border-bottom">
+                          <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                          <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/02.jpg" width="64" alt="محصول"></a>
+                            <div class="ps-2">
+                              <h6 class="widget-product-title"><a href="shop-single-v1.html">کفش کتانی</a></h6>
+                              <div class="widget-product-meta"><span class="text-accent me-2">79.<small>50</small></span><span class="text-muted">x 1</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="widget-cart-item py-2 border-bottom">
+                          <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                          <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/03.jpg" width="64" alt="محصول"></a>
+                            <div class="ps-2">
+                              <h6 class="widget-product-title"><a href="shop-single-v1.html">کفش کتانی</a></h6>
+                              <div class="widget-product-meta"><span class="text-accent me-2">22.<small>50</small></span><span class="text-muted">x 1</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="widget-cart-item py-2 border-bottom">
+                          <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                          <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/04.jpg" width="64" alt="محصول"></a>
+                            <div class="ps-2">
+                              <h6 class="widget-product-title"><a href="shop-single-v1.html">کفش کتانی</a></h6>
+                              <div class="widget-product-meta"><span class="text-accent me-2">9.<small>00</small></span><span class="text-muted">x 1</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                        <div class="fs-sm me-2 py-2"><span class="text-muted">جمع کل:</span><span class="text-accent fs-base ms-1">265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">ادامه خرید<i class="ci-arrow-right ms-1 me-n1"></i></a>
+                      </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>بررسی</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu mt-n2 pt-0 pb-2">
+            <div class="container">
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Search-->
+                <div class="input-group d-lg-none my-3"><i class="ci-search position-absolute top-50 start-0 translate-middle-y text-muted fs-base ms-3"></i>
+                  <input class="form-control rounded-start" type="text" placeholder="جستجو برای محصول">
+                </div>
+                <!-- Departments menu-->
+                <ul class="navbar-nav navbar-mega-nav pe-lg-2 me-lg-2">
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle ps-lg-0" href="#" data-bs-toggle="dropdown"><i class="ci-view-grid me-2"></i>بخش ها</a>
+                    <div class="dropdown-menu px-2 pb-4">
+                      <div class="d-flex flex-wrap flex-sm-nowrap">
+                        <div class="mega-dropdown-column pt-3 pt-sm-4 px-2 px-lg-3">
+                          <div class="widget widget-links"><a class="d-block overflow-hidden rounded-3 mb-3" href="#"><img src="img/shop/departments/01.jpg" alt="تن پوش"></a>
+                             <h6 class="fs-base mb-2">تن پوش</h6>
+                            <ul class="widget-list">
+                               <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">لباس زنانه</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">لباس مردانه</a></li>
+                               <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">لباس بچگانه</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-dropdown-column pt-4 px-2 px-lg-3">
+                          <div class="widget widget-links"><a class="d-block overflow-hidden rounded-3 mb-3" href="#"><img src="img/shop/departments/02.jpg" alt="کفش"></a>
+                         <h6 class="fs-base mb-2">کفش</h6>
+                            <ul class="widget-list">
+                             <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">کفش زنانه</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">کفش مردانه</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">کفش بچگانه</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-dropdown-column pt-4 px-2 px-lg-3">
+                          <div class="widget widget-links"><a class="d-block overflow-hidden rounded-3 mb-3" href="#"><img src="img/shop/departments/03.jpg" alt="گجت"></a>
+                            <h6 class="fs-base mb-2">گجت ها</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">تلفن های هوشمند و تبلت ها</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">اسباب های پوشیدنی</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">اسباب های پوشیدنی</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-wrap flex-sm-nowrap">
+                        <div class="mega-dropdown-column pt-4 px-2 px-lg-3">
+                          <div class="widget widget-links"><a class="d-block overflow-hidden rounded-3 mb-3" href="#"><img src="img/shop/departments/04.jpg" alt="دکور"></a>
+                           <h6 class="fs-base mb-2">مبلمان و دکور</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">مبلمان منزل</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">مبلمان منزل</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">مبلمان منزل</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-dropdown-column pt-4 px-2 px-lg-3">
+                          <div class="widget widget-links"><a class="d-block overflow-hidden rounded-3 mb-3" href="#"><img src="img/shop/departments/05.jpg" alt="تجهیزات جانبی"></a>
+                          <h6 class="fs-base mb-2">تجهیزات جانبی</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">کلاه</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">کلاه</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">کلاه</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-dropdown-column pt-4 px-2 px-lg-3">
+                          <div class="widget widget-links"><a class="d-block overflow-hidden rounded-3 mb-3" href="#"><img src="img/shop/departments/06.jpg" alt="سرگرمی"></a>
+                            <h6 class="fs-base mb-2">سرگرمی</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">اسباب بازی های کودک</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">اسباب بازی های کودک</a></li>
+                              <li class="widget-list-item mb-1"><a class="widget-list-link" href="#">اسباب بازی های کودک</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Primary menu-->
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">خانه</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item border-bottom py-2" href="home-nft.html"><span class="d-block text-heading">بازار NFT<span class="badge bg-danger ms-1">جدید</span></span><small class="d-block text-muted">چند فروشندگی،مزایده</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-nft.html" style="width: 250px;"><img src="img/home/preview/th08.jpg" alt="بازار NFT"></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-fashion-store-v1.html"><span class="d-block text-heading">فروشگاه مد 1 </span><small class="d-block text-muted">طرح کلاسیک فروشگاه</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-fashion-store-v1.html" style="width: 250px;"><img src="img/home/preview/th01.jpg" alt="فروشگاه مد 1 "></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-electronics-store.html"><span class="d-block text-heading">فروشگاه الکترونیکی</span><small class="d-block text-muted">اسلایدر+بنر تبلیغاتی</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-electronics-store.html" style="width: 250px;"><img src="img/home/preview/th03.jpg" alt="فروشگاه الکترونیکی"></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-marketplace.html"><span class="d-block text-heading">بازار</span><small class="d-block text-muted">چند فروشندگی</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-marketplace.html" style="width: 250px;"><img src="img/home/preview/th04.jpg" alt="بازار"></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-grocery-store.html"><span class="d-block text-heading">ارگانیک</span><small class="d-block text-muted">تمام صفحه+منو</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-grocery-store.html" style="width: 250px;"><img src="img/home/preview/th06.jpg" alt="سوپر مارکت"></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-food-delivery.html"><span class="d-block text-heading">خدمات تحویل غذا</span><small class="d-block text-muted">تحویل غذا و نوشیدنی</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-food-delivery.html" style="width: 250px;"><img src="img/home/preview/th07.jpg" alt="خدمات تحویل غذا"></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-fashion-store-v2.html"><span class="d-block text-heading">فروشگاه مد 2</span><small class="d-block text-muted">اسلایدر+دسته بندی</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-fashion-store-v2.html" style="width: 250px;"><img src="img/home/preview/th02.jpg" alt="فروشگاه مد 2"></a></div>
+                      </li>
+                      <li class="dropdown position-static mb-0"><a class="dropdown-item py-2" href="home-single-store.html"><span class="d-block text-heading">فروشگاه تک محصول</span><small class="d-block text-muted">تک محصول/مارک</small></a>
+                        <div class="dropdown-menu h-100 animation-none mt-0 p-3"><a class="d-block" href="home-single-store.html" style="width: 250px;"><img src="img/home/preview/th05.jpg" alt="تک محصول/مارک"></a></div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">فروشگاه</a>
+                    <div class="dropdown-menu p-0">
+                      <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                          <div class="widget widget-links mb-4">
+                            <h6 class="fs-base mb-3">لایه های فروشگاه</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-grid-ls.html">فروشگاه-نوار سمت راست</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-grid-rs.html">فروشگاه-نوار سمت چپ</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-grid-ft.html">فروشگاه-فیلتر بالا</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-list-ls.html">لیست فروشگاه-منو راست</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-list-rs.html">لیست فروشگاه-منوچپ</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-list-ft.html">لیست فروشگاه-فیلتر بالا</a></li>
+                            </ul>
+                          </div>
+                          <div class="widget widget-links mb-4">
+                            <h6 class="fs-base mb-3">بازار</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link" href="marketplace-category.html">دسته بندی</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="marketplace-single.html">تک صفحه</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="marketplace-vendor.html">چند فروشنده</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="marketplace-cart.html">سبدخرید</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="marketplace-checkout.html">بررسی</a></li>
+                            </ul>
+                          </div>
+                          <div class="widget widget-links">
+                            <h6 class="fs-base mb-3">فروشگاه سوپر مارکت </h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link" href="grocery-catalog.html">کاتالوگ محصول</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="grocery-single.html">صفحه محصول</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="grocery-checkout.html">بررسی</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                          <div class="widget widget-links mb-4">
+                            <h6 class="fs-base mb-3">تحویل غذا</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link" href="food-delivery-category.html">دسته بندی</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="food-delivery-single.html">تک کالا(رستوران)</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="food-delivery-cart.html">سبد خرید(سفارش)</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="food-delivery-checkout.html">بررسی (خرید-پرداخت)</a></li>
+                            </ul>
+                          </div>
+                          <div class="widget widget-links">
+                            <h6 class="fs-base mb-3">بازار NFT<span class="badge bg-danger ms-1">جدید</span></h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-catalog-v1.html">کاتالوگ 1 </a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-catalog-v2.html">کاتالوگ 2 </a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-single-auction-live.html">تک مورد - حراج</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-single-auction-ended.html">تک مورد- حراج زنده</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-single-buy.html">تک مورد - خرید</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-vendor.html">چند فروشنده</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-connect-wallet.html">کیف پول</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="nft-create-item.html">ایتم جدید</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-dropdown-column pt-1 pt-lg-4 px-2 px-lg-3">
+                          <div class="widget widget-links mb-4">
+                            <h6 class="fs-base mb-3">صفحات فروشگاه</h6>
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-categories.html">دسته بندی فروشگاه</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-single-v1.html">محصول 1</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-single-v2.html">محصول 2</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="shop-cart.html">سبدخرید</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="checkout-details.html">بررسی-جزئیات</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="checkout-shipping.html">بررسی-حمل و نقل</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="checkout-payment.html">بررسی-پرداخت</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="checkout-review.html">بررسی-مشاهده</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="checkout-complete.html">بررسی-کامل شدن</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="order-tracking.html">رهیگیری سفارش</a></li>
+                              <li class="widget-list-item"><a class="widget-list-link" href="comparison.html">مقایسه محصول</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">حساب کاربری</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">حساب کاربری فروشگاه</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="account-orders.html">تاریخچه سفارشات</a></li>
+                          <li><a class="dropdown-item" href="account-profile.html">پروفایل</a></li>
+                          <li><a class="dropdown-item" href="account-address.html">آدرس</a></li>
+                          <li><a class="dropdown-item" href="account-payment.html">روش پرداخت</a></li>
+                          <li><a class="dropdown-item" href="account-wishlist.html">علاقه مندی</a></li>
+                          <li><a class="dropdown-item" href="account-tickets.html">تیکت</a></li>
+                          <li><a class="dropdown-item" href="account-single-ticket.html">صفحه تکی تیکت</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">پنل فروشنده</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="dashboard-settings.html">تنظیمات</a></li>
+                           <li><a class="dropdown-item" href="dashboard-purchases.html">خرید</a></li>
+                          <li><a class="dropdown-item" href="dashboard-favorites.html">علاقه مندی ها</a></li>
+                          <li><a class="dropdown-item" href="dashboard-sales.html">فروش</a></li>
+                          <li><a class="dropdown-item" href="dashboard-products.html">محصولات</a></li>
+                          <li><a class="dropdown-item" href="dashboard-add-new-product.html">محصول جدید</a></li>
+                          <li><a class="dropdown-item" href="dashboard-payouts.html">پرداخت</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">بازار NFT<span class="badge bg-danger ms-1">جدید</span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="nft-account-settings.html">پروفایل</a></li>
+                          <li><a class="dropdown-item" href="nft-account-payouts.html">پرداخت</a></li>
+                          <li><a class="dropdown-item" href="nft-account-my-items.html">گزینه ها</a></li>
+                          <li><a class="dropdown-item" href="nft-account-my-collections.html">کلکسیون</a></li>
+                          <li><a class="dropdown-item" href="nft-account-favorites.html">علاقه مندی </a></li>
+                          <li><a class="dropdown-item" href="nft-account-notifications.html">اعلانات</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="account-signin.html">ورود/ثبت نام</a></li>
+                      <li><a class="dropdown-item" href="account-password-recovery.html">بازیابی رمز</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">صفحات</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">انواع  منو</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="navbar-1-level-light.html">منو روشن 1</a></li>
+                          <li><a class="dropdown-item" href="navbar-1-level-dark.html">منو تاریک 1</a></li>
+                          <li><a class="dropdown-item" href="navbar-2-level-light.html">منو روشن 2</a></li>
+                          <li><a class="dropdown-item" href="navbar-2-level-dark.html">منو تاریک 2</a></li>
+                          <li><a class="dropdown-item" href="navbar-3-level-light.html">منو روشن 3</a></li>
+                          <li><a class="dropdown-item" href="navbar-3-level-dark.html">منو تاریک 3</a></li>
+                          <li><a class="dropdown-item" href="home-electronics-store.html">فروشگاه الکترونیکی</a></li>
+                          <li><a class="dropdown-item" href="home-marketplace.html">بازار</a></li>
+                          <li><a class="dropdown-item" href="home-grocery-store.html">منو کنار</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="about.html">درباره ما</a></li>
+                      <li><a class="dropdown-item" href="contacts.html">تماس با ما</a></li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">مرکز راهنمایی</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="help-topics.html">موضوع های کمک </a></li>
+                          <li><a class="dropdown-item" href="help-single-topic.html">موضوع تکی</a></li>
+                          <li><a class="dropdown-item" href="help-submit-request.html">ارسال درخواست</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">پیدا نشد 404</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="404-simple.html">متن ساده 404 </a></li>
+                          <li><a class="dropdown-item" href="404-illustration.html">404 تصویر</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="sticky-footer.html">فوتر چسبیده</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">وبلاگ</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">طرح بندی لیست بلاگ</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="blog-list-sidebar.html">لیست با نوار کناری</a></li>
+                          <li><a class="dropdown-item" href="blog-list.html">لیست بدون نوار کناری</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">طرح شبکه ای وبلاگ</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="blog-grid-sidebar.html">شبکه با نوار کناری</a></li>
+                          <li><a class="dropdown-item" href="blog-grid.html">شبکه بدون نوار کناری</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">چیدمات تک پست</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="blog-single-sidebar.html">مقاله با نوار کناری</a></li>
+                          <li><a class="dropdown-item" href="blog-single.html">مقاله بدون نوار کناری</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">مستندات</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">
+                          <div class="d-flex">
+                            <div class="lead text-muted pt-1"><i class="ci-book"></i></div>
+                            <div class="ms-2"><span class="d-block text-heading">اسناد</span><small class="d-block text-muted">شروع به سفارش</small></div>
+                          </div></a></li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">
+                          <div class="d-flex">
+                            <div class="lead text-muted pt-1"><i class="ci-server"></i></div>
+                            <div class="ms-2"><span class="d-block text-heading">اجزا<span class="badge bg-info ms-2">40+</span></span><small class="d-block text-muted">ساخت سریعتر</small></div>
+                          </div></a></li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">
+                          <div class="d-flex">
+                            <div class="lead text-muted pt-1"><i class="ci-edit"></i></div>
+                            <div class="ms-2"><span class="d-block text-heading">تغییرات<span class="badge bg-success ms-2">v2.4.0</span></span><small class="d-block text-muted">بروز رسانی</small></div>
+                          </div></a></li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">
+                          <div class="d-flex">
+                            <div class="lead text-muted pt-1"><i class="ci-help"></i></div>
+                            <div class="ms-2"><span class="d-block text-heading">پشتیبانی</span><small class="d-block text-muted">setinco@gmail.com</small></div>
+                          </div></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page Title-->
+      <div class="page-title-overlap bg-dark pt-4">
+        <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+          <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
+                <li class="breadcrumb-item"><a class="text-nowrap" href="index-2.html"><i class="ci-home"></i>خانه</a></li>
+                <li class="breadcrumb-item text-nowrap"><a href="#">فروشگاه</a>
+                </li>
+                <li class="breadcrumb-item text-nowrap active" aria-current="page">لیست محصولات</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+            <h1 class="h3 text-light mb-0">لیست محصولات</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container pb-5 mb-2 mb-md-4">
+        <div class="row">
+          <!-- Sidebar-->
+          <aside class="col-lg-4">
+            <!-- Sidebar-->
+            <div class="offcanvas offcanvas-collapse bg-white w-100 rounded-3 shadow-lg py-1" id="shop-sidebar" style="max-width: 22rem;">
+              <div class="offcanvas-header align-items-center shadow-sm">
+                <h2 class="h5 mb-0">فیلتر</h2>
+                <button class="btn-close ms-auto" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body py-grid-gutter px-lg-grid-gutter">
+                <!-- Categories-->
+                <div class="widget widget-categories mb-4 pb-4 border-bottom">
+                  <h3 class="widget-title">دسته بندی</h3>
+                  <div class="accordion mt-n1" id="shop-categories">
+                    <!-- Shoes-->
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><a class="accordion-button collapsed" href="#shoes" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="shoes">کفش</a></h3>
+                      <div class="accordion-collapse collapse" id="shoes" data-bs-parent="#shop-categories">
+                        <div class="accordion-body">
+                          <div class="widget widget-links widget-filter">
+                            <div class="input-group input-group-sm mb-2">
+                              <input class="widget-filter-search form-control rounded-end" type="text" placeholder="جستجو"><i class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+                            </div>
+                            <ul class="widget-list widget-filter-list pt-1" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">دیدن همه</span><span class="fs-xs text-muted ms-3">1,953</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پمپ و کفش پاشنه بلند</span><span class="fs-xs text-muted ms-3">247</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پمپ و کفش پاشنه بلند</span><span class="fs-xs text-muted ms-3">156</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">صندل</span><span class="fs-xs text-muted ms-3">310</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">صندل</span><span class="fs-xs text-muted ms-3">402</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">صندل</span><span class="fs-xs text-muted ms-3">393</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">دمپایی</span><span class="fs-xs text-muted ms-3">50</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">دمپایی</span><span class="fs-xs text-muted ms-3">93</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">بوت مردانه</span><span class="fs-xs text-muted ms-3">122</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">بوت مردانه</span><span class="fs-xs text-muted ms-3">116</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">همه کفش ها</span><span class="fs-xs text-muted ms-3">24</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">همه کفش ها</span><span class="fs-xs text-muted ms-3">31</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">کفش مجلسی</span><span class="fs-xs text-muted ms-3">9</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">کفش مجلسی</span><span class="fs-xs text-muted ms-3">18</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Clothing-->
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><a class="accordion-button" href="#clothing" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="clothing">تن پوش</a></h3>
+                      <div class="accordion-collapse collapse show" id="clothing" data-bs-parent="#shop-categories">
+                        <div class="accordion-body">
+                          <div class="widget widget-links widget-filter">
+                            <div class="input-group input-group-sm mb-2">
+                              <input class="widget-filter-search form-control rounded-end" type="text" placeholder="جستجو"><i class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+                            </div>
+                         <ul class="widget-list widget-filter-list pt-1" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">دیدن همه</span><span class="fs-xs text-muted ms-3">2,548</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">تن پوش</span><span class="fs-xs text-muted ms-3">235</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">تن پوش</span><span class="fs-xs text-muted ms-3">410</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">لباس</span><span class="fs-xs text-muted ms-3">107</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">لباس</span><span class="fs-xs text-muted ms-3">93</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">هودی</span><span class="fs-xs text-muted ms-3">122</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">هودی</span><span class="fs-xs text-muted ms-3">116</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">کت</span><span class="fs-xs text-muted ms-3">215</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">کت</span><span class="fs-xs text-muted ms-3">150</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">جین</span><span class="fs-xs text-muted ms-3">8</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">جین</span><span class="fs-xs text-muted ms-3">26</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پیراهن</span><span class="fs-xs text-muted ms-3">164</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پیراهن</span><span class="fs-xs text-muted ms-3">147</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">تی شرت</span><span class="fs-xs text-muted ms-3">139</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">تی شرت</span><span class="fs-xs text-muted ms-3">65</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پیراهن</span><span class="fs-xs text-muted ms-3">18</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پیراهن</span><span class="fs-xs text-muted ms-3">209</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">تاپ</span><span class="fs-xs text-muted ms-3">132</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">تاپ</span><span class="fs-xs text-muted ms-3">105</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">لباس شنا</span><span class="fs-xs text-muted ms-3">87</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Bags-->
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><a class="accordion-button collapsed" href="#bags" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="bags">کیف</a></h3>
+                      <div class="accordion-collapse collapse" id="bags" data-bs-parent="#shop-categories">
+                        <div class="accordion-body">
+                          <div class="widget widget-links widget-filter">
+                            <div class="input-group input-group-sm mb-2">
+                              <input class="widget-filter-search form-control rounded-end" type="text" placeholder="جستجو"><i class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+                            </div>
+                             <ul class="widget-list widget-filter-list pt-1" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">دیدن همه</span><span class="fs-xs text-muted ms-3">801</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">مجلسی</span><span class="fs-xs text-muted ms-3">238</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">مجلسی</span><span class="fs-xs text-muted ms-3">116</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">اسپرت</span><span class="fs-xs text-muted ms-3">104</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">اسپرت</span><span class="fs-xs text-muted ms-3">115</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پول</span><span class="fs-xs text-muted ms-3">17</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">پول</span><span class="fs-xs text-muted ms-3">9</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">ورزشی</span><span class="fs-xs text-muted ms-3">93</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">ورزشی</span><span class="fs-xs text-muted ms-3">5</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">مسافرتی</span><span class="fs-xs text-muted ms-3">8</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">زنانه و بچگانه</span><span class="fs-xs text-muted ms-3">2</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">مسافرتی</span><span class="fs-xs text-muted ms-3">31</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">زنانه و بچگانه</span><span class="fs-xs text-muted ms-3">45</span></a></li>
+                              <li class="widget-list-item widget-filter-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span class="widget-filter-item-text">مسافرتی</span><span class="fs-xs text-muted ms-3">18</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sunglasses-->
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><a class="accordion-button collapsed" href="#sunglasses" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="sunglasses">عینک</a></h3>
+                      <div class="collapse" id="sunglasses" data-bs-parent="#shop-categories">
+                        <div class="accordion-body">
+                          <div class="widget widget-links">
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>دیدن همه</span><span class="fs-xs text-muted ms-3">1,842</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>فشن</span><span class="fs-xs text-muted ms-3">953</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>اسپرت</span><span class="fs-xs text-muted ms-3">589</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>کلاسیک</span><span class="fs-xs text-muted ms-3">300</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Watches-->
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><a class="accordion-button collapsed" href="#watches" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="watches">جین</a></h3>
+                      <div class="accordion-collapse collapse" id="watches" data-bs-parent="#shop-categories">
+                        <div class="accordion-body">
+                          <div class="widget widget-links">
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>دیدن همه</span><span class="fs-xs text-muted ms-3">734</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>جین فشن</span><span class="fs-xs text-muted ms-3">572</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>جین باکلاس</span><span class="fs-xs text-muted ms-3">110</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>جین فشن</span><span class="fs-xs text-muted ms-3">34</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>جین اسپرت</span><span class="fs-xs text-muted ms-3">18</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accessories-->
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><a class="accordion-button collapsed" href="#accessories" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="accessories">کیف</a></h3>
+                      <div class="accordion-collapse collapse" id="accessories" data-bs-parent="#shop-categories">
+                        <div class="accordion-body">
+                          <div class="widget widget-links">
+                            <ul class="widget-list">
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>دیدن همه</span><span class="fs-xs text-muted ms-3">920</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>کمربندها</span><span class="fs-xs text-muted ms-3">364</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>کلاه</span><span class="fs-xs text-muted ms-3">405</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>جواهر</span><span class="fs-xs text-muted ms-3">131</span></a></li>
+                              <li class="widget-list-item"><a class="widget-list-link d-flex justify-content-between align-items-center" href="#"><span>آرایشی</span><span class="fs-xs text-muted ms-3">20</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- قیمت -->
+                <div class="widget mb-4 pb-4 border-bottom">
+                  <h3 class="widget-title">قیمت</h3>
+                  <div class="range-slider" data-start-min="250" data-start-max="680" data-min="0" data-max="1000" data-step="1">
+                    <div class="range-slider-ui"></div>
+                    <div class="d-flex pb-1">
+                      <div class="w-50 pe-2 me-2">
+                        <div class="input-group input-group-sm"><span class="input-group-text">تومان</span>
+                          <input class="form-control range-slider-value-min" type="text">
+                        </div>
+                      </div>
+                      <div class="w-50 ps-2">
+                        <div class="input-group input-group-sm"><span class="input-group-text">تومان</span>
+                          <input class="form-control range-slider-value-max" type="text">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Filter by Brand-->
+                <div class="widget widget-filter mb-4 pb-4 border-bottom">
+                  <h3 class="widget-title">برند</h3>
+                  <div class="input-group input-group-sm mb-2">
+                    <input class="widget-filter-search form-control rounded-end pe-5" type="text" placeholder="جستجو"><i class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+                  </div>
+				  
+                  <ul class="widget-list widget-filter-list list-unstyled pt-1" style="max-height: 11rem;" data-simplebar data-simplebar-auto-hide="false">
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="adidas">
+                        <label class="form-check-label widget-filter-item-text" for="adidas">آدیداس</label>
+                      </div><span class="fs-xs text-muted">425</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="ataylor">
+                        <label class="form-check-label widget-filter-item-text" for="ataylor">آدیداس</label>
+                      </div><span class="fs-xs text-muted">15</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="armani">
+                        <label class="form-check-label widget-filter-item-text" for="armani">آدیداس</label>
+                      </div><span class="fs-xs text-muted">18</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="banana">
+                        <label class="form-check-label widget-filter-item-text" for="banana">آدیداس</label>
+                      </div><span class="fs-xs text-muted">103</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="bilabong">
+                        <label class="form-check-label widget-filter-item-text" for="bilabong">آدیداس</label>
+                      </div><span class="fs-xs text-muted">27</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="birkenstock">
+                        <label class="form-check-label widget-filter-item-text" for="birkenstock">نایک</label>
+                      </div><span class="fs-xs text-muted">10</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="klein">
+                        <label class="form-check-label widget-filter-item-text" for="klein">نایک</label>
+                      </div><span class="fs-xs text-muted">365</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="columbia">
+                        <label class="form-check-label widget-filter-item-text" for="columbia">نایک</label>
+                      </div><span class="fs-xs text-muted">508</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="converse">
+                        <label class="form-check-label widget-filter-item-text" for="converse">نایک</label>
+                      </div><span class="fs-xs text-muted">176</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dockers">
+                        <label class="form-check-label widget-filter-item-text" for="dockers">نایک</label>
+                      </div><span class="fs-xs text-muted">54</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="fruit">
+                        <label class="form-check-label widget-filter-item-text" for="fruit">نایک</label>
+                      </div><span class="fs-xs text-muted">739</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hanes">
+                        <label class="form-check-label widget-filter-item-text" for="hanes">نایک</label>
+                      </div><span class="fs-xs text-muted">92</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="choo">
+                        <label class="form-check-label widget-filter-item-text" for="choo">نایک</label>
+                      </div><span class="fs-xs text-muted">17</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="levis">
+                        <label class="form-check-label widget-filter-item-text" for="levis">پوما</label>
+                      </div><span class="fs-xs text-muted">361</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="lee">
+                        <label class="form-check-label widget-filter-item-text" for="lee">پوما</label>
+                      </div><span class="fs-xs text-muted">264</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wearhouse">
+                        <label class="form-check-label widget-filter-item-text" for="wearhouse">پوما</label>
+                      </div><span class="fs-xs text-muted">75</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newbalance">
+                        <label class="form-check-label widget-filter-item-text" for="newbalance">پوما</label>
+                      </div><span class="fs-xs text-muted">218</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="nike">
+                        <label class="form-check-label widget-filter-item-text" for="nike">پوما</label>
+                      </div><span class="fs-xs text-muted">810</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="navy">
+                        <label class="form-check-label widget-filter-item-text" for="navy">پوما</label>
+                      </div><span class="fs-xs text-muted">147</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="polo">
+                        <label class="form-check-label widget-filter-item-text" for="polo">پوما</label>
+                      </div><span class="fs-xs text-muted">64</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="puma">
+                        <label class="form-check-label widget-filter-item-text" for="puma">تامی</label>
+                      </div><span class="fs-xs text-muted">370</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="reebok">
+                        <label class="form-check-label widget-filter-item-text" for="reebok">تامی</label>
+                      </div><span class="fs-xs text-muted">506</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="skechers">
+                        <label class="form-check-label widget-filter-item-text" for="skechers">تامی</label>
+                      </div><span class="fs-xs text-muted">209</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hilfiger">
+                        <label class="form-check-label widget-filter-item-text" for="hilfiger">تامی</label>
+                      </div><span class="fs-xs text-muted">487</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="armour">
+                        <label class="form-check-label widget-filter-item-text" for="armour">پوما</label>
+                      </div><span class="fs-xs text-muted">90</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="urban">
+                        <label class="form-check-label widget-filter-item-text" for="urban">پوما</label>
+                      </div><span class="fs-xs text-muted">152</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="vsecret">
+                        <label class="form-check-label widget-filter-item-text" for="vsecret">پوما</label>
+                      </div><span class="fs-xs text-muted">238</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wolverine">
+                        <label class="form-check-label widget-filter-item-text" for="wolverine">نایک</label>
+                      </div><span class="fs-xs text-muted">29</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wrangler">
+                        <label class="form-check-label widget-filter-item-text" for="wrangler">نایک</label>
+                      </div><span class="fs-xs text-muted">115</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Filter by Size-->
+                <div class="widget widget-filter mb-4 pb-4 border-bottom">
+                  <h3 class="widget-title">سایز</h3>
+                  <div class="input-group input-group-sm mb-2">
+                    <input class="widget-filter-search form-control rounded-end pe-5" type="text" placeholder="جستجو"><i class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+                  </div>
+                  <ul class="widget-list widget-filter-list list-unstyled pt-1" style="max-height: 11rem;" data-simplebar data-simplebar-auto-hide="false">
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-xs">
+                        <label class="form-check-label widget-filter-item-text" for="size-xs">XS</label>
+                      </div><span class="fs-xs text-muted">34</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-s">
+                        <label class="form-check-label widget-filter-item-text" for="size-s">S</label>
+                      </div><span class="fs-xs text-muted">57</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-m">
+                        <label class="form-check-label widget-filter-item-text" for="size-m">M</label>
+                      </div><span class="fs-xs text-muted">198</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-l">
+                        <label class="form-check-label widget-filter-item-text" for="size-l">L</label>
+                      </div><span class="fs-xs text-muted">72</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-xl">
+                        <label class="form-check-label widget-filter-item-text" for="size-xl">XL</label>
+                      </div><span class="fs-xs text-muted">46</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-39">
+                        <label class="form-check-label widget-filter-item-text" for="size-39">39</label>
+                      </div><span class="fs-xs text-muted">112</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-40">
+                        <label class="form-check-label widget-filter-item-text" for="size-40">40</label>
+                      </div><span class="fs-xs text-muted">85</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-41">
+                        <label class="form-check-label widget-filter-item-text" for="size-40">41</label>
+                      </div><span class="fs-xs text-muted">210</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-42">
+                        <label class="form-check-label widget-filter-item-text" for="size-42">42</label>
+                      </div><span class="fs-xs text-muted">57</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-43">
+                        <label class="form-check-label widget-filter-item-text" for="size-43">43</label>
+                      </div><span class="fs-xs text-muted">30</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-44">
+                        <label class="form-check-label widget-filter-item-text" for="size-44">44</label>
+                      </div><span class="fs-xs text-muted">61</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-45">
+                        <label class="form-check-label widget-filter-item-text" for="size-45">45</label>
+                      </div><span class="fs-xs text-muted">23</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-46">
+                        <label class="form-check-label widget-filter-item-text" for="size-46">46</label>
+                      </div><span class="fs-xs text-muted">19</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-47">
+                        <label class="form-check-label widget-filter-item-text" for="size-47">47</label>
+                      </div><span class="fs-xs text-muted">15</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-48">
+                        <label class="form-check-label widget-filter-item-text" for="size-48">48</label>
+                      </div><span class="fs-xs text-muted">12</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-49">
+                        <label class="form-check-label widget-filter-item-text" for="size-49">49</label>
+                      </div><span class="fs-xs text-muted">8</span>
+                    </li>
+                    <li class="widget-filter-item d-flex justify-content-between align-items-center">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="size-50">
+                        <label class="form-check-label widget-filter-item-text" for="size-50">50</label>
+                      </div><span class="fs-xs text-muted">6</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Filter by Color-->
+                <div class="widget">
+                  <h3 class="widget-title">رنگ</h3>
+				  
+                  <div class="d-flex flex-wrap">
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-blue-gray">
+                      <label class="form-option-label rounded-circle" for="color-blue-gray"><span class="form-option-color rounded-circle" style="background-color: #b3c8db;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-blue-gray">آبی</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-burgundy">
+                      <label class="form-option-label rounded-circle" for="color-burgundy"><span class="form-option-color rounded-circle" style="background-color: #ca7295;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-burgundy">بنفش</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-teal">
+                      <label class="form-option-label rounded-circle" for="color-teal"><span class="form-option-color rounded-circle" style="background-color: #91c2c3;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-teal">آبی</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-brown">
+                      <label class="form-option-label rounded-circle" for="color-brown"><span class="form-option-color rounded-circle" style="background-color: #9a8480;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-brown">قهوه ای</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-coral-red">
+                      <label class="form-option-label rounded-circle" for="color-coral-red"><span class="form-option-color rounded-circle" style="background-color: #ff7072;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-coral-red">قرمز</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-navy">
+                      <label class="form-option-label rounded-circle" for="color-navy"><span class="form-option-color rounded-circle" style="background-color: #696dc8;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-navy">سورمه ای</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-charcoal">
+                      <label class="form-option-label rounded-circle" for="color-charcoal"><span class="form-option-color rounded-circle" style="background-color: #4e4d4d;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-charcoal">زغالی</label>
+                    </div>
+                    <div class="form-check form-option text-center mb-2 mx-1" style="width: 4rem;">
+                      <input class="form-check-input" type="checkbox" id="color-sky-blue">
+                      <label class="form-option-label rounded-circle" for="color-sky-blue"><span class="form-option-color rounded-circle" style="background-color: #8bcdf5;"></span></label>
+                      <label class="d-block fs-xs text-muted mt-n1" for="color-sky-blue">آبی آسمانی</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <!-- Content  -->
+          <section class="col-lg-8">
+            <!-- Toolbar-->
+            <div class="d-flex justify-content-center justify-content-sm-between align-items-center pt-2 pb-4 pb-sm-5">
+              <div class="d-flex flex-wrap">
+                <div class="d-flex align-items-center flex-nowrap me-3 me-sm-4 pb-3">
+                  <label class="text-light opacity-75 text-nowrap fs-sm me-2 d-none d-sm-block" for="sorting">مرتب سازی:</label>
+                  <select class="form-select" id="sorting">
+                  <option>محبوبیت</option>
+                  <option>قیمت کم به زیاد</option>
+                  <option>قیمت زیاد به کم</option>
+                  <option>امتیاز</option>
+                  </select><span class="fs-sm text-light opacity-75 text-nowrap ms-2 d-none d-md-block">از 287 محصول</span>
+                </div>
+              </div>
+              <div class="d-flex pb-3"><a class="nav-link-style nav-link-light me-3" href="#"><i class="ci-arrow-left"></i></a><span class="fs-md text-light">1 / 5</span><a class="nav-link-style nav-link-light ms-3" href="#"><i class="ci-arrow-right"></i></a></div>
+              <div class="d-none d-sm-flex pb-3"><a class="btn btn-icon nav-link-style bg-light text-dark disabled opacity-100 me-2" href="#"><i class="ci-view-grid"></i></a><a class="btn btn-icon nav-link-style nav-link-light" href="shop-list-ls.html"><i class="ci-view-list"></i></a></div>
+            </div>
+            <!-- Products grid-->
+            <div class="row mx-n2">
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/01.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">154.<small>00</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size1" id="s-75">
+                        <label class="form-option-label" for="s-75">7.5</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size1" id="s-80" checked>
+                        <label class="form-option-label" for="s-80">8</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size1" id="s-85">
+                        <label class="form-option-label" for="s-85">8.5</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size1" id="s-90">
+                        <label class="form-option-label" for="s-90">9</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card"><span class="badge bg-danger badge-shadow">تخفیف</span>
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/02.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">28.<small>50</small></span>
+                        <del class="fs-sm text-muted">38.<small>50</small></del>
+                      </div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-half active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color1" id="white" checked>
+                        <label class="form-option-label rounded-circle" for="white"><span class="form-option-color rounded-circle" style="background-color: #eaeaeb;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color1" id="blue">
+                        <label class="form-option-label rounded-circle" for="blue"><span class="form-option-color rounded-circle" style="background-color: #d1dceb;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color1" id="yellow">
+                        <label class="form-option-label rounded-circle" for="yellow"><span class="form-option-color rounded-circle" style="background-color: #f4e6a2;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color1" id="pink">
+                        <label class="form-option-label rounded-circle" for="pink"><span class="form-option-color rounded-circle" style="background-color: #f3dcff;"></span></label>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <select class="form-select form-select-sm me-2">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                      </select>
+                      <button class="btn btn-primary btn-sm" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    </div>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/03.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">39.<small>50</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size2" id="xs">
+                        <label class="form-option-label" for="xs">XS</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size2" id="s" checked>
+                        <label class="form-option-label" for="s">S</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size2" id="m">
+                        <label class="form-option-label" for="m">M</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size2" id="l">
+                        <label class="form-option-label" for="l">L</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/04.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">68.<small>40</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size3" id="xs2" checked>
+                        <label class="form-option-label" for="xs2">XS</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size3" id="s2">
+                        <label class="form-option-label" for="s2">S</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size3" id="m2">
+                        <label class="form-option-label" for="m2">M</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size3" id="l2">
+                        <label class="form-option-label" for="l2">L</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/05.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-muted fs-sm">موجود نیست</span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-half active"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden"><a class="btn btn-secondary btn-sm d-block w-100 mb-2" href="shop-single-v1.html">دیدن جزئیات</a>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/06.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">79.<small>50</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color2" id="khaki" checked>
+                        <label class="form-option-label rounded-circle" for="khaki"><span class="form-option-color rounded-circle" style="background-color: #97947c;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color2" id="jeans">
+                        <label class="form-option-label rounded-circle" for="jeans"><span class="form-option-color rounded-circle" style="background-color: #99a8be;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color2" id="white2">
+                        <label class="form-option-label rounded-circle" for="white2"><span class="form-option-color rounded-circle" style="background-color: #eaeaeb;"></span></label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Banner-->
+            <div class="py-sm-2">
+              <div class="d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden mb-4 rounded-3">
+                <div class="py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start">
+                  <h4 class="fs-lg fw-light mb-2">مکالمه همه ستاره</h4>
+                  <h3 class="mb-4">روز خود را راحت کنید</h3><a class="btn btn-primary btn-shadow btn-sm" href="#">خرید کنید</a>
+                </div><img class="d-block ms-auto" src="img/shop/catalog/banner.jpg" alt="Shop Converse">
+              </div>
+            </div>
+            <!-- Products grid-->
+            <div class="row mx-n2">
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/07.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">زنانه و بچگانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">18.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size4" id="xs3" checked>
+                        <label class="form-option-label" for="xs3">XS</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size4" id="s3">
+                        <label class="form-option-label" for="s3">S</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size4" id="m3">
+                        <label class="form-option-label" for="m3">M</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/08.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">تن پوش</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html"> کفش ورزشی کفش پارچه ای</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">14.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/09.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">وازم آریشی</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">رژ لب متالیک (زرشکی)</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">12.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-half active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color3" id="crimson" checked>
+                        <label class="form-option-label rounded-circle" for="crimson"><span class="form-option-color rounded-circle" style="background-color: #bd3c82;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color3" id="creamy">
+                        <label class="form-option-label rounded-circle" for="creamy"><span class="form-option-color rounded-circle" style="background-color: #ebae81;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color3" id="palm">
+                        <label class="form-option-label rounded-circle" for="palm"><span class="form-option-color rounded-circle" style="background-color: #ca8799;"></span></label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/10.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">کیف مردانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کیف مردانه</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">7.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/11.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">کیف مردانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">99.<small>50</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color4" id="blue2" checked>
+                        <label class="form-option-label rounded-circle" for="blue2"><span class="form-option-color rounded-circle" style="background-color: #879fb3;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color4" id="brown">
+                        <label class="form-option-label rounded-circle" for="brown"><span class="form-option-color rounded-circle" style="background-color: #9c6d4a;"></span></label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color4" id="black">
+                        <label class="form-option-label rounded-circle" for="black"><span class="form-option-color rounded-circle" style="background-color: #333333;"></span></label>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <select class="form-select form-select-sm me-2">
+                        <option>9.5</option>
+                        <option>10</option>
+                        <option>10.5</option>
+                        <option>11</option>
+                        <option>11.5</option>
+                      </select>
+                      <button class="btn btn-primary btn-sm" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    </div>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/12.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">کیف مردانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">25.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-half active"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size5" id="s4" checked>
+                        <label class="form-option-label" for="s4">S</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size5" id="m4">
+                        <label class="form-option-label" for="m4">M</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size5" id="l4">
+                        <label class="form-option-label" for="l4">L</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card"><span class="badge bg-danger badge-shadow">تخفیف</span>
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/13.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">کیف مردانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کفش کتانی</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">11.<small>50</small></span>
+                        <del class="fs-sm text-muted">13.<small>50</small></del>
+                      </div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size6" id="s5">
+                        <label class="form-option-label" for="s5">S</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size6" id="m5">
+                        <label class="form-option-label" for="m5">M</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size6" id="l5" checked>
+                        <label class="form-option-label" for="l5">L</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size6" id="xl5">
+                        <label class="form-option-label" for="xl5">XL</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/14.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">کیف مردانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کیف مردانه</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">58.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size7" id="s6">
+                        <label class="form-option-label" for="s6">S</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size7" id="m6">
+                        <label class="form-option-label" for="m6">M</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size7" id="l6" checked>
+                        <label class="form-option-label" for="l6">L</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size7" id="xl6">
+                        <label class="form-option-label" for="xl6">XL</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+              </div>
+              <!-- Product-->
+              <div class="col-md-4 col-sm-6 px-2 mb-4">
+                <div class="card product-card">
+                  <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به علاقه مندی"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/15.jpg" alt="محصول"></a>
+                  <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">کیف مردانه</a>
+                    <h3 class="product-title fs-sm"><a href="shop-single-v1.html">کیف مردانه</a></h3>
+                    <div class="d-flex justify-content-between">
+                      <div class="product-price"><span class="text-accent">79.<small>99</small></span></div>
+                      <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-half active"></i><i class="star-rating-icon ci-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-hidden">
+                    <div class="text-center pb-2">
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size8" id="m7">
+                        <label class="form-option-label" for="m7">M</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size8" id="l7" checked>
+                        <label class="form-option-label" for="l7">L</label>
+                      </div>
+                      <div class="form-check form-option form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="size8" id="xl7">
+                        <label class="form-option-label" for="xl7">XL</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>اضافه کردن به سبدخرید</button>
+                    <div class="text-center"><a class="nav-link-style fs-ms" href="#quick-view" data-bs-toggle="modal"><i class="ci-eye align-middle me-1"></i>مشاهده</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3">
+            <!-- Pagination-->
+            <nav class="d-flex justify-content-between pt-2" aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#"><i class="ci-arrow-left me-2"></i>قبلی</a></li>
+              </ul>
+              <ul class="pagination">
+                <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
+                <li class="page-item active d-none d-sm-block" aria-current="page"><span class="page-link">1<span class="visually-hidden">(جاری)</span></span></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">2</a></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a></li>
+              </ul>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next">بعدی<i class="ci-arrow-right ms-2"></i></a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-dark pt-5">
+      <div class="container">
+        <div class="row pb-2">
+          <div class="col-md-4 col-sm-6">
+            <div class="widget widget-links widget-light pb-2 mb-4">
+              <h3 class="widget-title text-light">بخشهای فروشگاه</h3>
+              <ul class="widget-list">
+                <li class="widget-list-item"><a class="widget-list-link" href="#">کفش های کتانی و ورزشی</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                 <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                 <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                 <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+               <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+                 <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+              <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+              <li class="widget-list-item"><a class="widget-list-link" href="#">لباس ورزشی</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="widget widget-links widget-light pb-2 mb-4">
+              <h3 class="widget-title text-light">اطلاعات حساب</h3>
+              <ul class="widget-list">
+                <li class="widget-list-item"><a class="widget-list-link" href="#">حساب</a></li>
+               <li class="widget-list-item"><a class="widget-list-link" href="#">نرخ حمل و نقل </a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">بازپرداخت و جایگزینی</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">رهیگیری سفارش</a></li>
+               <li class="widget-list-item"><a class="widget-list-link" href="#">اطلاعات تحویل</a></li>
+        <li class="widget-list-item"><a class="widget-list-link" href="#">مالیات و هزینه ها</a></li>
+              </ul>
+            </div>
+            <div class="widget widget-links widget-light pb-2 mb-4">
+              <h3 class="widget-title text-light">درباره ما</h3>
+              <ul class="widget-list">
+                <li class="widget-list-item"><a class="widget-list-link" href="#">درباره شرکت</a></li>
+               <li class="widget-list-item"><a class="widget-list-link" href="#">تیم ما</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">مشاغل</a></li>
+                <li class="widget-list-item"><a class="widget-list-link" href="#">خبر ها</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="widget pb-2 mb-4">
+              <h3 class="widget-title text-light pb-1">در جریان باشید</h3>
+              <form class="subscription-form validate" action="#" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                <div class="input-group flex-nowrap"><i class="ci-mail position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
+                  <input class="form-control rounded-start" type="email" name="EMAIL" placeholder="ایمیل شما" required>
+                  <button class="btn btn-primary" type="submit" name="subscribe">عضویت</button>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute;right: -5000px;" aria-hidden="true">
+                  <input class="subscription-form-antispam" type="text" name="b_c7103e2c981361a6639545bd5_29ca296126" tabindex="-1">
+                </div>
+                <div class="form-text text-light opacity-50">* برای دریافت پیشنهادات تخفیف ، به روزرسانی و اطلاعات جدید محصولات ، در خبرنامه ما مشترک شوید.</div>
+                <div class="subscription-status"></div>
+              </form>
+            </div>
+            <div class="widget pb-2 mb-4">
+              <h3 class="widget-title text-light pb-1">برنامه ما را بارگیری کنید</h3>
+              <div class="d-flex flex-wrap">
+                <div class="me-2 mb-2"><a class="btn-market btn-apple" href="#" role="button"><span class="btn-market-subtitle">بارگیری در</span><span class="btn-market-title">App Store</span></a></div>
+                <div class="mb-2"><a class="btn-market btn-google" href="#" role="button"><span class="btn-market-subtitle">بارگیری در</span><span class="btn-market-title">Google Play</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5 bg-darker">
+        <div class="container">
+          <div class="row pb-3">
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="d-flex"><i class="ci-rocket text-primary" style="font-size: 2.25rem;"></i>
+                <div class="ps-3">
+                  <h6 class="fs-base text-light mb-1">تحویل سریع و رایگان</h6>
+                  <p class="mb-0 fs-ms text-light opacity-50">ارسال رایگان برای کلیه سفارش های بالای 200 </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="d-flex"><i class="ci-currency-exchange text-primary" style="font-size: 2.25rem;"></i>
+                <div class="ps-3">
+                  <h6 class="fs-base text-light mb-1">تضمین بازگشت پول</h6>
+                  <p class="mb-0 fs-ms text-light opacity-50">ما ظرف 30 روز پول برمی گردانیم</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="d-flex"><i class="ci-support text-primary" style="font-size: 2.25rem;"></i>
+                <div class="ps-3">
+                  <h6 class="fs-base text-light mb-1">پشتیبانی 24/7 مشتری</h6>
+                  <p class="mb-0 fs-ms text-light opacity-50">دوستانه 24/7 پشتیبانی مشتری</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="d-flex"><i class="ci-card text-primary" style="font-size: 2.25rem;"></i>
+                <div class="ps-3">
+                  <h6 class="fs-base text-light mb-1">پرداخت آنلاین ایمن</h6>
+                  <p class="mb-0 fs-ms text-light opacity-50">ما دارای گواهی هستیم</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-light mb-5">
+          <div class="row pb-2">
+            <div class="col-md-6 text-center text-md-start mb-4">
+              <div class="text-nowrap mb-4"><a class="d-inline-block align-middle mt-n1 me-3" href="#"><img class="d-block" src="img/footer-logo-light.png" width="117" alt="کارتزیلا"></a>
+                <div class="btn-group dropdown disable-autohide">
+                  <button class="btn btn-outline-light border-light btn-sm dropdown-toggle px-2" type="button" data-bs-toggle="dropdown"><img class="me-2" src="img/flags/en.png" width="20" alt="English">انگلیس</button>
+                  <ul class="dropdown-menu my-1">
+                    <li class="dropdown-item">
+                      <select class="form-select form-select-sm">
+                        <option value="usd">دلار</option>
+                        <option value="eur">تومان</option>
+                         <option value="ukp">یورو</option>
+                             <option value="jpy">پوند</option>
+                      </select>
+                    </li>
+                    <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="img/flags/fr.png" width="20" alt="فرانسه">فرانسه</a></li>
+                     <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="img/flags/de.png" width="20" alt="آلمان">آلمان</a></li>
+                    <li><a class="dropdown-item" href="#"><img class="me-2" src="img/flags/it.png" width="20" alt="ایتالیا">ایتالیا</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget widget-links widget-light">
+                <ul class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
+                  <li class="widget-list-item me-4"><a class="widget-list-link" href="#">خروجی ها</a></li>
+                  <li class="widget-list-item me-4"><a class="widget-list-link" href="#">شرکت های وابسته</a></li>
+                  <li class="widget-list-item me-4"><a class="widget-list-link" href="#">پشتیبانی</a></li>
+                  <li class="widget-list-item me-4"><a class="widget-list-link" href="#">شرایط</a></li>
+                  <li class="widget-list-item me-4"><a class="widget-list-link" href="#">شرایط استفاده</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 text-center text-md-end mb-4">
+              <div class="mb-3"><a class="btn-social bs-light bs-twitter ms-2 mb-2" href="#"><i class="ci-twitter"></i></a><a class="btn-social bs-light bs-facebook ms-2 mb-2" href="#"><i class="ci-facebook"></i></a><a class="btn-social bs-light bs-instagram ms-2 mb-2" href="#"><i class="ci-instagram"></i></a><a class="btn-social bs-light bs-pinterest ms-2 mb-2" href="#"><i class="ci-pinterest"></i></a><a class="btn-social bs-light bs-youtube ms-2 mb-2" href="#"><i class="ci-youtube"></i></a></div><img class="d-inline-block" src="img/cards-alt.png" width="187" alt="روش پرداخت">
+            </div>
+          </div>
+          <div class="pb-4 fs-xs text-light opacity-50 text-center text-md-start">© کلیه حقوق محفوظ است  <a class="text-light" href="#" target="_blank" rel="noopener">گروه ستین</a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Toolbar for handheld devices (Shop)-->
+    <div class="handheld-toolbar">
+      <div class="d-table table-layout-fixed w-100"><a class="d-table-cell handheld-toolbar-item" href="#" data-bs-toggle="offcanvas" data-bs-target="#shop-sidebar"><span class="handheld-toolbar-icon"><i class="ci-filter-alt"></i></span><span class="handheld-toolbar-label">فیلتر</span></a><a class="d-table-cell handheld-toolbar-item" href="account-wishlist.html"><span class="handheld-toolbar-icon"><i class="ci-heart"></i></span><span class="handheld-toolbar-label">علاقه مندی</span></a><a class="d-table-cell handheld-toolbar-item" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" onclick="window.scrollTo(0, 0)"><span class="handheld-toolbar-icon"><i class="ci-menu"></i></span><span class="handheld-toolbar-label">منو</span></a><a class="d-table-cell handheld-toolbar-item" href="shop-cart.html"><span class="handheld-toolbar-icon"><i class="ci-cart"></i><span class="badge bg-primary rounded-pill ms-1">4</span></span><span class="handheld-toolbar-label">265.00</span></a></div>
+    </div>
+    <!-- Back To Top Button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">بالا</span><i class="btn-scroll-top-icon ci-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/nouislider/dist/nouislider.min.js"></script>
+    <script src="vendor/drift-zoom/dist/Drift.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+
+
+</html>

@@ -1,4 +1,5 @@
 <!-- Sidebar-->
+
 <aside class="col-lg-4">
     <!-- Sidebar-->
     <div class="offcanvas offcanvas-collapse bg-white w-100 rounded-3 shadow-lg py-1" id="shop-sidebar"
@@ -13,7 +14,7 @@
             @include('page.store.product-list.sidebar-brand')
             @include('page.store.product-list.sidebar-filter')
 
-            <!-- Filter by Color-->
+            {{-- <!-- Filter by Color-->
             <div class="widget">
                 <h3 class="widget-title">رنگ</h3>
 
@@ -76,7 +77,7 @@
                             آسمانی</label>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </aside>

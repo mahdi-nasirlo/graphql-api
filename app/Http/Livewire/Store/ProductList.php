@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Store;
 
 use App\Http\Filters\AttributesFilter;
+use App\Http\Filters\PriceFilter;
 use App\Models\Category;
 use App\Models\Store\Product;
 use Illuminate\Pipeline\Pipeline;
@@ -19,7 +20,13 @@ class ProductList extends Component
 
     public $modalProduct;
 
+    public $maxPrice;
+
+    public $minPrice;
+
     public $queryString = [
+        'maxPrice',
+        "minPrice",
         'attributes'
     ];
 
@@ -30,6 +37,21 @@ class ProductList extends Component
 
     public function mount()
     {
+        $products =
+            app(Pipeline::class)
+            ->send(Product::query()
+                ->where('category_id', $this->category->id)
+                ->with(['attributes']))
+            ->through([
+                new AttributesFilter($this->attributes),
+            ])
+            ->thenReturn()
+            ->get();
+
+        $this->maxPrice = $products->max('price') / 1000;
+
+        $this->minPrice = $products->min('price') / 1000;
+
         if (!$this->category->products()->count()) {
             return redirect(route('home'));
         }
@@ -38,20 +60,7 @@ class ProductList extends Component
 
     public function updateWithFilter(Product $product)
     {
-        $posts = app(Pipeline::class)
-            ->send(Product::query()
-                ->where('category_id', $this->category->id)
-                ->with(['attributes']))
-            ->through([
-                new AttributesFilter($this->attributes)
-            ])
-            ->thenReturn()
-            ->get();
-    }
-
-    public function render()
-    {
-        $products =
+        $posts =
             app(Pipeline::class)
             ->send(Product::query()
                 ->where('category_id', $this->category->id)
@@ -62,12 +71,22 @@ class ProductList extends Component
             ->thenReturn()
             ->get();
 
-        // ->with(['category', 'attributes'])
-        // ->where('category_id', $this->category->id)
-        // ->whereHas('attributes', function ($query) {
-        //     $query->whereIn('name', $this->attributes);
-        // })
-        // ->paginate(10);
+        dd($posts);
+    }
+
+    public function render()
+    {
+        $products =
+            app(Pipeline::class)
+            ->send(Product::query()
+                ->where('category_id', $this->category->id)
+                ->with(['attributes']))
+            ->through([
+                new AttributesFilter($this->attributes),
+                new PriceFilter($this->minPrice, $this->maxPrice)
+            ])
+            ->thenReturn()
+            ->get();
 
         return view('livewire.store.product-list', compact('products'))
             ->layout('layout.master');

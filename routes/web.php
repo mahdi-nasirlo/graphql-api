@@ -1,9 +1,20 @@
 <?php
 
 use App\Http\Controllers\Store\CategoryListController;
+use App\Http\Livewire\BLog\Post;
+use App\Http\Livewire\BLog\PostList;
+use App\Http\Livewire\Cart\Cart;
+use App\Http\Livewire\Cart\Delivery;
+use App\Http\Livewire\Cart\Detail;
+use App\Http\Livewire\Cart\Review;
+use App\Http\Livewire\Cart\Service;
+use App\Http\Livewire\Profile\Address;
+use App\Http\Livewire\Profile\Dashboard;
+use App\Http\Livewire\Profile\Like;
+use App\Http\Livewire\Profile\Order;
+use App\Http\Livewire\Profile\Ticket;
+use App\Http\Livewire\Profile\TicketSingle;
 use App\Http\Livewire\Store\ProductList;
-use App\Models\Category;
-use App\Models\Store\Attribute;
 use App\Models\Store\Product;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -44,3 +55,31 @@ Route::name('store.')->prefix("store")->group(function () {
     Route::get("/categories/{category}", [CategoryListController::class, 'index'])->name('category.list');
     Route::get("/products/{category}", ProductList::class)->name('product.list');
 });
+
+
+Route::name('cart.')->prefix('cart')->group(function () {
+    Route::get("/", Cart::class)->name('index');
+    Route::get("/detail", Detail::class)->name('detail');
+    Route::get("/delivery", Delivery::class)->name("delivery");
+    Route::get("/service", Service::class)->name("service");
+    Route::get("/review", Review::class)->name("review");
+});
+
+Route::name('profile.')->prefix('profile')->group(function () {
+    Route::get("/", Dashboard::class)->name('dashboard');
+    Route::get("/order", Order::class)->name('order');
+    Route::get("/like", Like::class)->name("like");
+    Route::get("/ticket", Ticket::class)->name("ticket");
+    Route::get("/ticket/single", TicketSingle::class)->name('ticket.single');
+    Route::get("/address", Address::class)->name("address");
+});
+
+Route::name('blog.')->prefix('blog')->group(function () {
+    Route::get("/list", PostList::class)->name('list');
+    Route::get("/list/post", Post::class)->name('post');
+});
+
+Route::view("/contactUs", 'contact-us')->name('contactUs');
+Route::view("/faq", 'support')->name('support');
+Route::view("/faq/topic", 'support-single')->name('support.single');
+Route::view("/faq/request", 'support-request')->name('support.request');

@@ -3,8 +3,8 @@
 @endphp
 @foreach ($attributes as $attribute)
     <!-- Filter by Size-->
-    <div class="widget widget-filter mb-4 pb-4 border-bottom">
-        <h3 class="widget-title">سایز</h3>
+    <div class="widget widget-filter mb-4 pb-4 {{ $loop->last ?? 'border-bottom' }}">
+        <h3 class="widget-title">{{ $attribute->name }}</h3>
         @if ($attributes->count() > 6)
             <div class="input-group input-group-sm mb-2">
                 <input class="widget-filter-search form-control rounded-end pe-5" type="text" placeholder="جستجو"><i
@@ -27,7 +27,6 @@
         </ul>
     </div>
 @endforeach
-<button wire:click='updateWithFilter'>test</button>
 
 
 {{-- 

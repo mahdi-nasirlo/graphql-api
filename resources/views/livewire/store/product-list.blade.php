@@ -45,7 +45,7 @@ FIXME fix pagination
                                     <option>قیمت زیاد به کم</option>
                                     <option>امتیاز</option>
                                 </select><span class="fs-sm text-light opacity-75 text-nowrap ms-2 d-none d-md-block">از
-                                    287 محصول</span>
+                                    {{ $products->count() }} محصول</span>
                             </div>
                         </div>
                         <div class="d-flex pb-3"><a class="nav-link-style nav-link-light me-3" href="#"><i
