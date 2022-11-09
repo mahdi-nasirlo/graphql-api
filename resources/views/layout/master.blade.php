@@ -6,7 +6,7 @@
 
 <!-- Body-->
 
-<body style="overflow-x: clip;" class="handheld-toolbar-enabled">
+<body style="overflow-x: clip;width: 100.5%" class="handheld-toolbar-enabled">
     <!-- Google Tag Manager (noscript)-->
     <x-layout.auth-modal />
 
@@ -14,7 +14,9 @@
         <x-layout.header.index />
 
         @yield('content')
-
+        @if (isset($slot) and $slot !== null)
+            {{ $slot }}
+        @endif
         <x-layout.toolbar />
 
         <x-layout.script />

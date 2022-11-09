@@ -22,7 +22,8 @@
 
                 @foreach ($categories as $category)
                     <li class="dropdown mega-dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="{{ route('store.category.list', $category) }}"
+                        <a onclick="window.location='{{ route('store.category.list', $category) }}';"
+                            class="dropdown-item dropdown-toggle" href="{{ route('store.category.list', $category) }}"
                             data-bs-toggle="dropdown">
                             @if ($category->icon)
                                 <x-icon class="ci-laptop opacity-60 fs-lg me-2" name="{{ $category->icon }}" />
@@ -35,12 +36,17 @@
                                     @foreach ($category->children as $child)
                                         <div class="mega-dropdown-column pt-4 pb-0 py-sm-4 px-3">
                                             <div class="widget widget-links">
-                                                <h6 class="fs-base mb-3">{{ $child->name }}</h6>
+                                                <h6 class="fs-base mb-3">
+                                                    <a href="{{ route('store.category.list', $category) }}">
+                                                        {{ $child->name }}
+                                                    </a>
+                                                </h6>
                                                 @if ($child->hasChildren())
                                                     <ul class="widget-list">
                                                         @foreach ($child->children as $subCategory)
                                                             <li class="widget-list-item pb-1">
-                                                                <a class="widget-list-link" href="#">
+                                                                <a class="widget-list-link"
+                                                                    href="{{ route('store.category.list', $subCategory) }}">
                                                                     {{ $subCategory->name }}
                                                                 </a>
                                                             </li>

@@ -28,7 +28,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('attribute_product', function (Blueprint $table) {
+        Schema::create('attribute_category_product', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('attributes_id');
@@ -42,6 +42,13 @@ return new class extends Migration
             $table->foreign('product_id')
                 ->references('id')
                 ->on('products')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
 

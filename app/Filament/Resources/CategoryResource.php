@@ -40,8 +40,10 @@ class CategoryResource extends Resource
                         'web' => 'web',
                         'blog' => 'blog'
                     ]),
-                TextInput::make('level'),
+                TextInput::make('level')->default(0),
                 Forms\Components\Select::make('parent_id')
+                    ->searchable()
+                    ->preload()
                     ->label('دسته بندی پدر')
                     ->reactive()
                     ->afterStateUpdated(function (Closure $set, $state) {
@@ -53,7 +55,7 @@ class CategoryResource extends Resource
                     })
                     ->relationship('parent', 'name', fn (Builder $query, ?Category $record) => $query->whereNot('id', $record ? $record->id : null)),
                 Forms\Components\Toggle::make('is_visible'),
-                IconPicker::make('icon'),
+                // IconPicker::make('icon'),
                 Forms\Components\Textarea::make('shortInfo')
                     ->maxLength(65535),
                 Forms\Components\TextInput::make('cover')

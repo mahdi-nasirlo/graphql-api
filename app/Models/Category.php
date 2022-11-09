@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Store\Attribute;
+use App\Models\Store\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -55,5 +57,21 @@ class Category extends Model implements HasMedia
             return true;
         }
         return false;
+    }
+
+    public function attributes()
+    {
+        return $this->belongsToMany(
+            Attribute::class,
+            'attribute_category_product',
+            'category_id',
+            'attributes_id'
+        )
+            ->withPivot('value');
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
     }
 }

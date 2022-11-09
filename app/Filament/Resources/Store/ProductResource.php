@@ -5,17 +5,25 @@ namespace App\Filament\Resources\Store;
 use App\Filament\Resources\Store\ProductResource\Pages;
 use App\Filament\Resources\Store\ProductResource\RelationManagers;
 use App\Filament\Resources\Store\ProductResource\RelationManagers\AttributesRelationManager;
+use App\Models\Category;
 use App\Models\Store\Product;
+use Closure;
 use Filament\Forms;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Yepsua\Filament\Forms\Components\Rating;
+
+// TODO mask product price field
 
 class ProductResource extends Resource
 {
@@ -28,6 +36,7 @@ class ProductResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->autocomplete('off')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
@@ -49,6 +58,42 @@ class ProductResource extends Resource
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\Textarea::make('content')
                     ->maxLength(65535),
+                Select::make('category_id')
+                    ->required()
+                    ->searchable()
+                    ->preload()
+                    ->relationship('category', 'name')
+                    ->createOptionForm([
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\Textarea::make('desc')
+                            ->maxLength(65535),
+                        Select::make('type')
+                            ->options([
+                                'api' => 'api',
+                                'web' => 'web',
+                                'blog' => 'blog'
+                            ]),
+                        TextInput::make('level')->default(0),
+                        Forms\Components\Select::make('parent_id')
+                            ->label('دسته بندی پدر')
+                            ->reactive()
+                            ->afterStateUpdated(function (Closure $set, $state) {
+                                if ($state) {
+                                    $level = Category::find($state)->level;
+                                    $set('level', $level + 1);
+                                } else
+                                    $set('level', 0);
+                            })
+                            ->relationship('parent', 'name', fn (Builder $query, ?Category $record) => $query->whereNot('id', $record ? $record->id : null)),
+                        Forms\Components\Toggle::make('is_visible'),
+                        // IconPicker::make('icon'),
+                        Forms\Components\Textarea::make('shortInfo')
+                            ->maxLength(65535),
+                        Forms\Components\TextInput::make('cover')
+                            ->maxLength(255),
+                    ])
             ]);
     }
 

@@ -9,14 +9,15 @@
         @enderror
         <div class="mb-3">
             <label class="form-label" for="si-email">آدرس ایمیل</label>
-            <input wire:model='email' class="form-control" type="email" id="si-email" autocomplete="false"
+            <input wire:model='email' class="form-control" type="email" id="si-email" autocomplete="off"
                 placeholder="setin@gmail.com" required>
             <div class="invalid-feedback">لطفا یک آدرس ایمیل معتبر ارائه کنید</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="si-password">پسورد</label>
             <div class="password-toggle">
-                <input wire:model='password' class="form-control" type="password" id="si-password" required>
+                <input autocomplete="off" wire:model='password' class="form-control" type="password" id="si-password"
+                    required>
                 <label class="password-toggle-btn" aria-label="نمایش/پنهان کردن">
                     <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
                 </label>

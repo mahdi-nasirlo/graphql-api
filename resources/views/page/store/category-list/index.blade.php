@@ -45,8 +45,7 @@
                                 <img class="d-block w-100" src="{{ asset('/storage/' . $item->cover) }}"
                                     alt="{{ $item->name }}">
                             @else
-                                <img class="d-block w-100" src="{{ asset('/img/placeholder.png') }}"
-                                    alt="{{ $item->name }}">
+                                <img class="d-block w-100" src="{{ asset('/placeholder.jpg') }}" alt="{{ $item->name }}">
                             @endif
                         </a>
                         <div class="card-body ps-1">

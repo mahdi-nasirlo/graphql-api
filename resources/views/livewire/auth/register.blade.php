@@ -12,7 +12,7 @@
             <label for="su-email">آدرس ایمیل</label>
             <input wire:model='email' class="form-control" type="email" id="su-email" placeholder="setin@gmail.com"
                 required="">
-            {{-- <div class="invalid-feedback">لطفا یک آدرس ایمیل معتبر ارائه کنید</div> --}}
+            <div class="invalid-feedback">لطفا یک آدرس ایمیل معتبر ارائه کنید</div>
             @error('email')
                 <div class="text-danger">
                     {{ $message }}

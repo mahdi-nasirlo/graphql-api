@@ -10,7 +10,7 @@
             border-radius: 50%;
             width: 20px;
             height: 20px;
-            animation: spin 150ms linear infinite;
+            animation: spin 1500ms linear infinite;
         }
 
         @keyframes spin {
